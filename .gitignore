@@ -1,3 +1,6 @@
+# vim
+*.vim
+**/.*.sw*
 # Logs
 logs
 *.log

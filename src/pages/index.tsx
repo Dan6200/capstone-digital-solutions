@@ -5,7 +5,7 @@ const IndexPage: React.FC = () => {
   return (
     <div>
       <Navbar />
-      <h1>Hello, World!</h1>
+		  <h1 className='text-4xl font-bold p-5'>Hello, World!</h1>
     </div>
   )
 }
