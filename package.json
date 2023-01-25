@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "capstone-digitals-website",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "Website for CAPSTONE Digital Solutions Web Design and Digital Marketing Agency",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Daniel Nyong <danielnyong66@gmail.com>",
   "dependencies": {
     "@types/react": "^18.0.26",
     "@types/react-dom": "^18.0.10",
@@ -35,11 +35,9 @@
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
-  },
+  "repository": "https://github.com/gatsbyjs/gatsby-starter-default",
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"
-  }
+  },
+  "main": "index.js"
 }
