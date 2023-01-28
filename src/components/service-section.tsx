@@ -1,6 +1,6 @@
 import React, { FC } from 'react'
 
-let Services = [
+let Services: string[] = [
     'brand and logo design',
     'web design',
     'software development',
@@ -16,9 +16,9 @@ const ServiceSection: FC = () => {
             <h3 className="content-center block w-64 mx-auto my-16 font-semibold text-center capitalize text-l">
                 Our services
             </h3>
-            <div className="flex flex-wrap justify-between mx-auto w-[960px] h-[256px]">
+            <div className="flex flex-wrap justify-between mx-auto w-[800px] h-[256px]">
                 {Services.map((service) => (
-                    <div className="w-64 p-8 mx-2 my-8 border border-blue-300">
+                    <div className="w-64 p-8 mb-8 border border-blue-200">
                         <h4 className="text-center capitalize">{service}</h4>
                     </div>
                 ))}
