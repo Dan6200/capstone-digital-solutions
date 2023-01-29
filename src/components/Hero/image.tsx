@@ -1,10 +1,10 @@
 import React, { FC } from 'react'
-import heroImg from '../../images/pexels-christina-morillo-1181498.jpg'
+import heroImg from '../../images/Hero Image.png'
 
 export let Image: FC = () => (
-    <div className="flex items-center justify-end w-[30%]">
+    <div className="flex items-center justify-end w-[20%]">
         <img
-            className="border-2 border-primary rounded-full object-cover w-64 h-64"
+            className="object-cover w-full h-auto rounded-full"
             src={heroImg}
             alt=""
         />

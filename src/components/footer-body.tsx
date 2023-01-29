@@ -3,23 +3,23 @@ import React, { FC } from 'react'
 
 const FooterBody: FC = () => {
     return (
-        <section className="mx-auto w-full">
-            <h4 className="mb-8 text-2xl font-semibold capitalize">
+        <section className="w-[90%] mx-auto mb-64">
+            <h4 className="mb-16 text-xl font-semibold capitalize font-heading">
                 let us bring your brand online
             </h4>
-            <p className="">
+            <p className="max-w-4xl mb-16 font-paragraph text-md">
                 If you are looking for an agency with exceptional quality and a
                 client-centric approach, we absolutely look forward to working
                 with you and taking your business to new heights!
             </p>
-            <div className="w-96">
-                <div className="px-2 mx-auto">
-                    <span className="mr-4">
+            <div className="w-[40%]">
+                <div className="flex justify-between mx-auto mb-16 text-sm font-paragraph">
+                    <span className="mr-4 text-primary">
                         info@capstone-digital-solutions
                     </span>
                     <span>+2349033117211</span>
                 </div>
-                <button className="block w-full p-4 mt-8 uppercase border-2 border-blue-200 text-l">
+                <button className="shadow-xl text-white font-heading font-semibold leading-[80px] uppercase rounded-lg w-full hover:from-primary hover:shadow-2xl hover:to-secondary bg-gradient-to-r from-secondary to-primary inline h-auto text-md text-center">
                     click to get started
                 </button>
             </div>

@@ -5,7 +5,7 @@ import { Heading } from './heading'
 import { Image } from './image'
 
 const Hero: FC = () => (
-    <div className="px-[5%] h-auto w-full items-center mb-[8%]">
+    <div className="px-[5%] h-auto w-full items-center mb-64">
         <div className="flex justify-between">
             <Heading />
             <Image />
