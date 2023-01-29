@@ -7,13 +7,13 @@ const FooterBody: FC = () => {
             <h4 className="mb-16 text-xl font-semibold capitalize font-heading">
                 let us bring your brand online
             </h4>
-            <p className="max-w-4xl mb-16 font-paragraph text-md">
+            <p className="max-w-4xl mb-16 text-black-800 font-paragraph text-md">
                 If you are looking for an agency with exceptional quality and a
                 client-centric approach, we absolutely look forward to working
                 with you and taking your business to new heights!
             </p>
             <div className="w-[40%]">
-                <div className="flex justify-between mx-auto mb-16 text-sm font-paragraph">
+                <div className="flex justify-between mx-auto mb-16 text-sm text-black-800 font-paragraph">
                     <span className="mr-4 text-primary">
                         info@capstone-digital-solutions
                     </span>

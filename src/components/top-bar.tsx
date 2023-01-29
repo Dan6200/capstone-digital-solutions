@@ -6,7 +6,7 @@ const Topbar: FC = () => {
             <span className="mr-8 text-primary">
                 info@capstone-digital-solutions.com
             </span>
-            <span>+2349033117211</span>
+            <span className="text-black-800">+2349033117211</span>
         </div>
     )
 }

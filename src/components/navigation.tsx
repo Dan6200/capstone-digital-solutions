@@ -6,13 +6,13 @@ const links = ['services', 'portfolio', 'about', 'contact', 'articles']
 
 const Navbar: FC = () => {
     return (
-        <nav className="w-full h-16 flex items-center">
+        <nav className="flex items-center w-full h-16">
             <a className="mr-[5%] w-96" href="/">
                 <img src={logo} alt="Logo" className="block w-full" />
             </a>
             {links.map((link) => (
                 <a
-                    className="mr-[5%] text-black-900 font-paragraph text-sm no-underline capitalize"
+                    className="mr-[5%] text-black-800 font-paragraph text-sm no-underline capitalize"
                     href={'/' + link}
                 >
                     {link}

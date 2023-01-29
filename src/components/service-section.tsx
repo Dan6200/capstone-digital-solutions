@@ -15,7 +15,7 @@ let Services: object[] = [
     },
     {
         h: 'hosting & maintenance',
-        p: 'Let us handle the technical solutions that come with maintaining a digital prescence.',
+        p: 'Let us handle the technical solutions that come with maintaining digital products and a digital presence.',
     },
     {
         h: 'search engine optimization',
@@ -40,7 +40,7 @@ const ServiceSection: FC = () => {
                         <h4 className="mb-8 font-medium text-center capitalize align-middle font-heading">
                             {service.h}
                         </h4>
-                        <p className="text-center text-md font-paragraph">
+                        <p className="text-center text-black-800 text-md font-paragraph">
                             {service.p}
                         </p>
                     </div>
