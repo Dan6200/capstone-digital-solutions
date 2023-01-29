@@ -6,7 +6,7 @@ import ServiceSection from '../components/service-section'
 import Header from '../components/site-header'
 
 const IndexPage: React.FC = () => (
-    <div>
+    <div className="bg-white">
         <Header />
         <Hero />
         <ServiceSection />

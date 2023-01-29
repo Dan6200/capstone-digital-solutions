@@ -21,6 +21,37 @@ module.exports = {
 				secondary: '#0a24ff',
 				tertiary: '#051280',
 			},
+			fontFamily: {
+				paragraph: ['Raleway', 'sans-serif'],
+				heading: ['Josefin Sans']
+			},
+			fontSize: {
+				sm: '1rem',
+				md: '1.333rem',
+				lg: '1.777rem',
+				xl: '2.37rem',
+				'2xl': '3.15rem',
+				'3xl': '4.19rem',
+				'4xl': '5.58rem',
+				tablet: {
+					sm: '0.85rem',
+					md: '1.125rem',
+					lg: '1.5rem',
+					xl: '1.99rem',
+					'2xl': '2.65rem',
+					'3xl': '3.52rem',
+					'4xl': '4.68rem',
+				},
+				mobile: {
+					sm: '0.9rem',
+					md: '1.125rem',
+					lg: '1.4rem',
+					xl: '1.76rem',
+					'2xl': '2.2rem',
+					'3xl': '2.75rem',
+					'4xl': '3.4rem',
+				}
+			}
 		},
   },
   plugins: [],
