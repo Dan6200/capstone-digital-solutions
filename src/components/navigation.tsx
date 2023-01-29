@@ -3,9 +3,10 @@ import React, { FC } from 'react'
 import logo from '../images/Capstone-Logo-New.png'
 
 const links = ['services', 'portfolio', 'about', 'contact', 'articles']
+
 const Navbar: FC = () => {
     return (
-        <nav className="w-full flex items-center">
+        <nav className="w-full h-16 flex items-center">
             <a className="mr-[5%] w-96" href="/">
                 <img src={logo} alt="Logo" className="block w-full" />
             </a>
