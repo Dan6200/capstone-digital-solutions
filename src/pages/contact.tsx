@@ -4,7 +4,7 @@ import Footer from '../components/footer'
 import Header from '../components/site-header'
 
 const ContactPage: React.FC = () => (
-    <div className="w-full flex flex-col justify-between">
+    <div className="bg-white">
         <Header />
         <ContactForm />
         <Footer />

@@ -6,12 +6,12 @@ const fields = [
     { name: 'email', text: 'your email', type: 'email', style: '' },
     { name: 'budget', text: 'your budget', type: 'text', style: '' },
 ]
-
+// TODO: Break this up!!!
 const ContactForm: FC = () => (
     <div className="container flex justify-between w-[90%] h-96 mx-auto my-64 px-16 bg-color">
         <div className="my-auto w-[50%]">
-            <h3 className="capitalize text-4xl font-semibold text-black-900 font-heading">
-                let us design your next project
+            <h3 className="text-2xl font-semibold capitalize text-black-900 font-heading">
+                One-Stop shop for your business' digital needs...
             </h3>
         </div>
         <form className="my-auto w-[50%] ">
@@ -27,7 +27,7 @@ const ContactForm: FC = () => (
                     )
             )}
             <textarea
-                placeholder="describe your project"
+                placeholder="describe what your business requires"
                 className="font-paragraph resize-none focus-visible:outline-none focus:border-[1px] focus:border-primary rounded-md mb-4 border-[1px] w-full bg-black-400 text-black-700 border-black-500 capitalize p-2 h-32"
             ></textarea>
             <input
@@ -36,8 +36,8 @@ const ContactForm: FC = () => (
                 placeholder={fields[2].text}
                 className="font-paragraph focus-visible:outline-none focus:border-[1px] focus:border-primary rounded-md mb-4 border-[1px] w-full bg-black-400 text-black-700 border-black-500 capitalize p-2"
             />
-            <button className="rounded-md w-full bg-gradient-to-br from-secondary to-primary block h-auto p-4">
-                <span className="uppercase text-white font-heading font-semibold inline mr-8 text-base">
+            <button className="block w-full h-auto p-4 rounded-md bg-gradient-to-br from-secondary to-primary">
+                <span className="inline mr-8 text-base font-semibold text-white uppercase font-heading">
                     send message
                 </span>
                 <svg
