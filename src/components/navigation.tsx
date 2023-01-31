@@ -6,13 +6,13 @@ const links = ['services', 'portfolio', 'about', 'contact', 'articles']
 
 const Navbar: FC = () => {
     return (
-        <nav className="flex items-center w-full h-16">
-            <a className="mr-[5%] w-96" href="/">
+        <nav className="flex items-center w-full h-[10vw]">
+            <a className="mr-[5%] w-[90vw]" href="/">
                 <img src={logo} alt="Logo" className="block w-full" />
             </a>
             {links.map((link) => (
                 <a
-                    className="hover:text-primary mr-[5%] text-black-800 font-paragraph text-sm no-underline capitalize"
+                    className="hover:text-primary hidden mr-[5%] text-black-800 font-paragraph text-sm no-underline capitalize"
                     href={'/' + link}
                 >
                     {link}
@@ -24,9 +24,7 @@ const Navbar: FC = () => {
             >
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="inline"
-                    width="24"
-                    height="24"
+                    className="hidden w-[5vw] h-[5vw]"
                     viewBox="0 0 64 64"
                     stroke-width="3"
                     stroke="currentColor"

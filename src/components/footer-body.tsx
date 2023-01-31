@@ -3,11 +3,11 @@ import React, { FC } from 'react'
 
 const FooterBody: FC = () => {
     return (
-        <section className="w-[90%] mx-auto mb-64">
-            <h4 className="mb-16 text-xl font-semibold capitalize font-heading">
+        <section className="w-[90vw] mx-auto mb-[20vw]">
+            <h4 className="mb-16 text-5xl font-semibold capitalize font-heading">
                 let us bring your brand online
             </h4>
-            <p className="max-w-4xl mb-16 text-black-800 font-paragraph text-md">
+            <p className="mb-16 text-3xl text-black-800 font-paragraph">
                 If you are looking for an agency with exceptional quality and a
                 client-centric approach, we absolutely look forward to working
                 with you and taking your business to new heights!

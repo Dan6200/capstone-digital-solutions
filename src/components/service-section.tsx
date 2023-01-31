@@ -30,18 +30,18 @@ let Services: object[] = [
 // cspell:ignore semibold
 const ServiceSection: FC = () => {
     return (
-        <section className="w-auto mx-auto mb-64">
-            <h3 className="content-center block w-64 mx-auto mb-32 text-xl italic font-light text-center capitalize border-b-2 border-primary font-heading">
+        <section className="w-auto mx-auto mb-[20vw]">
+            <h3 className="content-center block w-[40vw] mx-auto mb-[10vw] text-5xl italic font-light text-center capitalize border-b-2 border-primary font-heading">
                 Our services
             </h3>
-            <div className="w-[80%] h-auto grid gap-16 grid-cols-3 mx-auto">
+            <div className="w-[80%] h-auto grid gap-[5vw] grid-cols-1 mx-auto">
                 {Services.map((service) => (
-                    <div className="flex flex-col justify-center w-full mx-auto text-lg text-white shadow-2xl bg-tertiary h-[512px]">
+                    <div className="flex flex-col justify-center w-full mx-auto text-white shadow-2xl bg-tertiary h-[60vh]">
                         <div className="w-[80%] mx-auto h-auto">
-                            <h4 className="mb-8 font-medium text-center capitalize font-heading">
+                            <h4 className="mb-8 text-5xl font-medium text-center capitalize font-heading">
                                 {service.h}
                             </h4>
-                            <p className="text-center text-[18px] font-paragraph">
+                            <p className="text-3xl text-center font-paragraph">
                                 {service.p}
                             </p>
                         </div>

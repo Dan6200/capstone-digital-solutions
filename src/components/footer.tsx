@@ -4,7 +4,7 @@ import BottomBar from './bottom-bar'
 import FooterBody from './footer-body'
 
 const Footer: FC = () => (
-    <footer className="w-full px-16 py-4">
+    <footer className="w-full px-[5vw] py-[2vw]">
         <FooterBody />
         <BottomBar />
     </footer>

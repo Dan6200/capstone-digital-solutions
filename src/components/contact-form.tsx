@@ -8,7 +8,7 @@ const fields = [
 ]
 // TODO: Break this up!!!
 const ContactForm: FC = () => (
-    <div className="container flex justify-between w-[90%] h-96 mx-auto my-64 px-16 bg-color">
+    <div className="container flex gap-16 justify-between w-[90%] h-96 mx-auto my-64 px-16 bg-color">
         <div className="my-auto w-[50%]">
             <h3 className="text-2xl font-semibold capitalize text-black-900 font-heading">
                 One-Stop shop for your business' digital needs...
