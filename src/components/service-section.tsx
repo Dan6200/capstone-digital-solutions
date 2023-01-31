@@ -11,7 +11,7 @@ let Services: object[] = [
     },
     {
         h: 'software development',
-        p: 'We use the latest technologies to craft impactful software. Our specialties include Web-App development, Mobile App development, and other custom software solutions.',
+        p: 'We use the latest technologies to craft impactful software. We build Web Applications, Mobile Applications, and other custom software solutions.',
     },
     {
         h: 'hosting & maintenance',
@@ -30,19 +30,21 @@ let Services: object[] = [
 // cspell:ignore semibold
 const ServiceSection: FC = () => {
     return (
-        <section className="w-auto mx-auto">
-            <h3 className="content-center block w-64 mx-auto my-16 text-xl italic font-light text-center capitalize font-heading">
+        <section className="w-auto mx-auto mb-64">
+            <h3 className="content-center block w-64 mx-auto mb-32 text-xl italic font-light text-center capitalize border-b-2 border-primary font-heading">
                 Our services
             </h3>
-            <div className="w-[80%] h-auto grid grid-cols-3 mx-auto">
+            <div className="w-[80%] h-auto grid gap-16 grid-cols-3 mx-auto">
                 {Services.map((service) => (
-                    <div className="w-full p-8 mx-auto mb-8 text-lg border border-blue-200 h-96">
-                        <h4 className="mb-8 font-medium text-center capitalize align-middle font-heading">
-                            {service.h}
-                        </h4>
-                        <p className="text-center text-black-800 text-md font-paragraph">
-                            {service.p}
-                        </p>
+                    <div className="flex flex-col justify-center w-full mx-auto text-lg text-white shadow-2xl bg-tertiary h-[512px]">
+                        <div className="w-[80%] mx-auto h-auto">
+                            <h4 className="mb-8 font-medium text-center capitalize font-heading">
+                                {service.h}
+                            </h4>
+                            <p className="text-center text-[18px] font-paragraph">
+                                {service.p}
+                            </p>
+                        </div>
                     </div>
                 ))}
             </div>

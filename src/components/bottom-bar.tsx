@@ -2,12 +2,14 @@
 import React, { FC } from 'react'
 React
 
-const BottomBar: FC = () => pug`
-	.flex.justify-between.w-full.px-16.bg-color.font-paragraph.text-sm.text-black-800
-		.capitalize &#169; CAPSTONE Digital Solutions. All rights reserved.
-		.capitalize terms and conditions
-		.capitalize privacy policy.
-		.flex.justify-between
-`
+const BottomBar: FC = () => (
+    <div className="flex justify-between w-full text-sm bg-color font-paragraph text-black-800">
+        <div className="text-left capitalize">
+            &#169; CAPSTONE Digital Solutions. All rights reserved.
+        </div>
+        <div className="text-center capitalize">terms and conditions</div>
+        <div className="text-right capitalize">privacy policy.</div>
+    </div>
+)
 
 export default BottomBar

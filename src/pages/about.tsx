@@ -5,7 +5,7 @@ import { MissionStatement } from '../components/mission-statements'
 import Header from '../components/site-header'
 
 const AboutPage: React.FC = () => (
-    <div className="h-screen bg-white flex flex-col justify-between">
+    <div className="bg-white">
         <Header />
         <MissionStatement />
         <FAQ />
