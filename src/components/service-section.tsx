@@ -1,4 +1,5 @@
 import React, { FC } from 'react'
+import { FlipCard } from './flip-card'
 
 let Services: object[] = [
     {
@@ -30,22 +31,18 @@ let Services: object[] = [
 // cspell:ignore semibold
 const ServiceSection: FC = () => {
     return (
-        <section className="w-auto mx-auto mb-[20vw]">
-            <h3 className="content-center block w-[40vw] mx-auto mb-[10vw] text-5xl italic font-light text-center capitalize border-b-2 border-primary font-heading">
+        <section className="w-auto mx-auto mb-[60vw]">
+            <style>{`
+			.flip-card:hover .flip-card-inner {
+				transform: rotateY(-180deg);
+			}
+				`}</style>
+            <h3 className="content-center block w-[40vw] mx-auto mb-[20vw] text-5xl italic font-light text-center capitalize border-b-2 border-primary font-heading">
                 Our services
             </h3>
-            <div className="w-[80%] h-auto grid gap-[5vw] grid-cols-1 mx-auto">
+            <div className="w-[80%] h-auto grid gap-[20vw] grid-cols-1 mx-auto">
                 {Services.map((service) => (
-                    <div className="flex flex-col justify-center w-full mx-auto text-white shadow-2xl bg-tertiary h-[60vh]">
-                        <div className="w-[80%] mx-auto h-auto">
-                            <h4 className="mb-8 text-5xl font-medium text-center capitalize font-heading">
-                                {service.h}
-                            </h4>
-                            <p className="text-3xl text-center font-paragraph">
-                                {service.p}
-                            </p>
-                        </div>
-                    </div>
+                    <FlipCard service={service} />
                 ))}
             </div>
         </section>

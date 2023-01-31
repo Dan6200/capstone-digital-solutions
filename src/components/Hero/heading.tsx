@@ -2,7 +2,7 @@ import React, { FC } from 'react'
 
 export const Heading = () => (
     <div className=" w-full sm:w-[70%] h-auto">
-        <h1 className="text-6xl font-semibold text-left capitalize font-heading text-black-900">
+        <h1 className="text-6xl font-semibold text-center capitalize font-heading text-black-900">
             <span className="text-4xl italic font-light">your next</span>{' '}
             <span className="text-transparent bg-clip-text bg-gradient-to-br from-secondary to-primary">
                 web design
