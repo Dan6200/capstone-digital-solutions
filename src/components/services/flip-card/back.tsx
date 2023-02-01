@@ -10,7 +10,7 @@ export const Back = ({ service }: { service: any }) => {
             }}
             className="absolute flex flex-col justify-center w-full h-full mx-auto text-white border-2 border-white shadow-2xl shadow-primary bg-gradient-to-br from-black-900 to-secondary"
         >
-            <p className="w-[80%] mx-auto  h-auto text-3xl sm:text-2xl text-center font-paragraph">
+            <p className="w-[80%] mx-auto  h-auto text-3xl sm:text-2xl md:text-xl lg:text-md text-center font-paragraph">
                 {service.p}
             </p>
         </div>

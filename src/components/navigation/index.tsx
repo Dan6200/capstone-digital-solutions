@@ -6,13 +6,16 @@ const links = ['services', 'portfolio', 'about', 'contact', 'articles']
 
 const Navbar: FC = () => {
     return (
-        <nav className="flex items-center w-full h-[10vw]">
-            <a className="mr-[5%] w-[90vw] sm:w-[70vw]" href="/">
+        <nav className="flex justify-between items-center w-full md:h-[7vw] lg:h-[5vw] h-[10vw]">
+            <a
+                className="mr-[5%] lg:w-[30vw] w-[90vw] sm:w-[70vw] md:w-[60vw]"
+                href="/"
+            >
                 <Logo />
             </a>
             {links.map((link) => (
                 <a
-                    className="hover:text-primary hidden mr-[5%] text-black-800 font-paragraph text-sm no-underline capitalize"
+                    className="hover:text-primary lg:inline hidden mr-[5%] text-black-800 font-paragraph text-md no-underline capitalize"
                     href={'/' + link}
                 >
                     {link}
@@ -25,7 +28,7 @@ const Navbar: FC = () => {
                 {/* search icon */}
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="hidden w-[5vw] h-[5vw]"
+                    className="lg:block hidden w-[2vw] h-[2vw]"
                     viewBox="0 0 64 64"
                     stroke-width="3"
                     stroke="currentColor"
@@ -37,7 +40,7 @@ const Navbar: FC = () => {
             </a>
             {/* hamburger menu icon */}
             <svg
-                className="hidden w-[5vw] h-[5vw]"
+                className="lg:hidden w-[5vw] h-[5vw]"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 64 64"
                 stroke-width="3"

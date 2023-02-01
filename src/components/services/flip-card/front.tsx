@@ -9,7 +9,7 @@ export const Front = ({ service }) => {
                 WebkitBackfaceVisibility: 'hidden',
             }}
         >
-            <h4 className="w-[80%] mx-auto h-auto text-5xl sm:text-4xl font-medium text-center capitalize font-heading">
+            <h4 className="w-[80%] mx-auto h-auto text-5xl sm:text-4xl md:text-3xl lg:text-xl font-medium text-center capitalize font-heading">
                 {service.h}
             </h4>
         </div>
