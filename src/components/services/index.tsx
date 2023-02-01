@@ -14,7 +14,7 @@ const Services: FC = () => {
             <h3 className="content-center block w-[40vw] sm:w-[30vw] mx-auto mb-[20vw] text-5xl sm:text-4xl italic font-light text-center capitalize border-b-2 border-primary font-heading">
                 Our services
             </h3>
-            <div className="w-[80%] h-auto grid gap-[20vw] grid-cols-1 mx-auto">
+            <div className="w-[80%] sm:w-[60%] h-auto grid gap-[20vw] sm:gap-[15vw] grid-cols-1 mx-auto ">
                 {services.map((service) => (
                     <FlipCard service={service} />
                 ))}
