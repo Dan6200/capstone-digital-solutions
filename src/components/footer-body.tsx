@@ -5,7 +5,7 @@ const FooterBody: FC = () => {
     return (
         <section className="w-[90vw] sm:w-[80vw] mx-auto mb-[40vw] sm:mb-[30vw] text-center md:text-left">
             <h4 className="mb-16 text-5xl font-semibold capitalize sm:text-4xl md:text-3xl lg:text-2xl font-heading">
-                let us bring your brand online
+                let us bring your business online
             </h4>
             <p className="mb-16 text-3xl sm:text-2xl md:text-xl lg:text-md text-black-800 font-paragraph">
                 If you are looking for an agency with exceptional quality and a
