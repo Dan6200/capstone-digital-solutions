@@ -2,7 +2,7 @@ import React, { FC } from 'react'
 
 const Topbar: FC = () => {
     return (
-        <div className="flex justify-between h-[10vw] mx-auto text-2xl font-paragraph">
+        <div className="flex justify-between h-[10vw] mx-auto text-2xl sm:text-xl font-paragraph">
             <span className="text-primary">
                 info@capstone-digital-solutions.com
             </span>

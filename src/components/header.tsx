@@ -4,7 +4,7 @@ import Navbar from './navigation'
 import Topbar from './top-bar'
 
 const Header: FC = () => (
-    <header className="border-b-[1px] border-black-500 w-full mb-[40vw] p-[5vw]">
+    <header className="border-b-[1px] sm:mb-[20vw] sm:p-[2vw] border-black-500 w-full mb-[40vw] p-[5vw]">
         <Topbar />
         <Navbar />
     </header>

@@ -1,7 +1,4 @@
-import React, { FC } from 'react'
-import { FlipCard } from './flip-card'
-
-let Services: object[] = [
+export let services: object[] = [
     {
         h: 'brand and logo design',
         p: 'We build recognizable branding that reflects your business values',
@@ -27,26 +24,3 @@ let Services: object[] = [
         p: 'Capture the eyes of people searching for a product or service that you offer.',
     },
 ]
-
-// cspell:ignore semibold
-const ServiceSection: FC = () => {
-    return (
-        <section className="w-auto mx-auto mb-[60vw]">
-            <style>{`
-			.flip-card:hover .flip-card-inner {
-				transform: rotateY(-180deg);
-			}
-				`}</style>
-            <h3 className="content-center block w-[40vw] mx-auto mb-[20vw] text-5xl italic font-light text-center capitalize border-b-2 border-primary font-heading">
-                Our services
-            </h3>
-            <div className="w-[80%] h-auto grid gap-[20vw] grid-cols-1 mx-auto">
-                {Services.map((service) => (
-                    <FlipCard service={service} />
-                ))}
-            </div>
-        </section>
-    )
-}
-
-export default ServiceSection
