@@ -2,19 +2,21 @@
 import React, { FC } from 'react'
 
 const fields = [
-    { name: 'name', type: 'text', text: 'your name', style: '' },
-    { name: 'email', text: 'your email', type: 'email', style: '' },
-    { name: 'budget', text: 'your budget', type: 'text', style: '' },
-]
+        { name: 'name', type: 'text', text: 'your name', style: '' },
+        { name: 'email', text: 'your email', type: 'email', style: '' },
+        { name: 'budget', text: 'your budget', type: 'text', style: '' },
+    ],
+    inputStyle =
+        'font-paragraph focus-visible:outline-none focus:border-[1px] focus:border-primary rounded-md mb-[3vw] border-[1px] w-full bg-black-400 text-black-700 border-black-500 capitalize p-[1.5vw]'
 // TODO: Break this up!!!
 const ContactForm: FC = () => (
-    <div className="container flex gap-16 justify-between w-[90%] h-96 mx-auto my-64 px-16 bg-color">
-        <div className="my-auto w-[50%]">
-            <h3 className="text-2xl font-semibold capitalize text-black-900 font-heading">
+    <div className="container text-mobile-4xl md:text-mobile-2xl sm:text-mobile-3xl flex-col gap-16 justify-between w-[80%] sm:w-[70%] mx-auto mb-[60vw] bg-color">
+        <div className="my-auto">
+            <h3 className="text-5xl md:text-3xl sm:text-4xl font-semibold mb-[10vw] text-center capitalize text-black-900 font-heading">
                 One-Stop shop for your business' digital needs...
             </h3>
         </div>
-        <form className="my-auto w-[50%] ">
+        <form className="mx-auto">
             {fields.map(
                 (f) =>
                     f.name != 'budget' && (
@@ -22,22 +24,22 @@ const ContactForm: FC = () => (
                             name={f.name}
                             type={f.type}
                             placeholder={f.text}
-                            className="font-paragraph focus-visible:outline-none focus:border-[1px] focus:border-primary rounded-md mb-4 border-[1px] w-full bg-black-400 text-black-700 border-black-500 capitalize p-2"
+                            className={inputStyle}
                         />
                     )
             )}
             <textarea
                 placeholder="describe what your business requires"
-                className="font-paragraph resize-none focus-visible:outline-none focus:border-[1px] focus:border-primary rounded-md mb-4 border-[1px] w-full bg-black-400 text-black-700 border-black-500 capitalize p-2 h-32"
+                className="font-paragraph resize-none focus-visible:outline-none focus:border-[1px] focus:border-primary rounded-md mb-[5vw] border-[1px] w-full bg-black-400 text-black-700 border-black-500 capitalize p-[2vw] h-[30vw]"
             ></textarea>
             <input
                 name={fields[2].name}
                 type={fields[2].type}
                 placeholder={fields[2].text}
-                className="font-paragraph focus-visible:outline-none focus:border-[1px] focus:border-primary rounded-md mb-4 border-[1px] w-full bg-black-400 text-black-700 border-black-500 capitalize p-2"
+                className={inputStyle}
             />
-            <button className="block w-full h-auto p-4 rounded-md bg-gradient-to-br from-secondary to-primary">
-                <span className="inline mr-8 text-base font-semibold text-white uppercase font-heading">
+            <button className="block w-full h-auto sm:leading-[10vw] md:leading-[9vw] leading-[15vw] rounded-md bg-gradient-to-br from-secondary to-primary">
+                <span className="inline mr-[5vw] font-semibold text-white uppercase font-heading">
                     send message
                 </span>
                 <svg
