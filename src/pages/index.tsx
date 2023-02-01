@@ -6,7 +6,7 @@ import Services from '../components/services'
 // import PortfolioSection from '../components/portfolio-section'
 
 const IndexPage: React.FC = () => (
-    <div className="bg-white">
+    <div className="bg-white scroll-smooth">
         <Header />
         <Hero />
         <Services />

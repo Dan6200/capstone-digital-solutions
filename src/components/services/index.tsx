@@ -5,7 +5,7 @@ import { FlipCard } from './flip-card'
 // cspell:ignore semibold
 const Services: FC = () => {
     return (
-        <section className="w-auto mx-auto mb-[60vw]">
+        <section id="services" className="w-auto mx-auto mb-[60vw]">
             <style>{`
 					.flip-card:hover .flip-card-inner {
 						transform: rotateY(-180deg);
