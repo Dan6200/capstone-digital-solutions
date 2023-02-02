@@ -47,7 +47,7 @@ export const FlipCard = ({ service }: { service: any }) => {
         <div
             ref={card}
             onClick={toggleFlip}
-            className="flip-card mx-auto w-full h-[100vw] lg:h-[40vw] md:h-[60vw] sm:h-[80vw]"
+            className="w-full flip-card h-[100vw] xl:h-[30vw] lg:h-[40vw] md:h-[60vw] sm:h-[80vw]"
             style={{
                 perspective: '1000px',
                 backgroundColor: 'transparent',
