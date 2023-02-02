@@ -2,7 +2,7 @@
 import React, { FC } from 'react'
 import { Logo } from './logo'
 
-const links = ['services', 'portfolio', 'about', 'contact', 'articles']
+const links = ['about', 'contact', 'services', 'portfolio', 'articles']
 
 const Navbar: FC = () => {
     return (
@@ -13,14 +13,28 @@ const Navbar: FC = () => {
             >
                 <Logo />
             </a>
-            {links.map((link) => (
-                <a
-                    className="hover:text-primary lg:inline hidden mr-[5%] text-black-800 font-paragraph text-md no-underline capitalize"
-                    href={'/' + link}
-                >
-                    {link}
-                </a>
-            ))}
+            <div className="flex gap-[5%] w-fit">
+                {links.map((link) => (
+                    <div className="flex-row lg:flex">
+                        <a
+                            className="no-underline capitalize hover:text-primary text-black-800 font-paragraph text-md"
+                            href={'/' + link}
+                        >
+                            {link}
+                        </a>
+                    </div>
+                ))}
+                {links.map((link) => (
+                    <div className="flex-row hidden lg:flex">
+                        <a
+                            className="hover:text-primary mr-[5%] text-black-800 font-paragraph text-md no-underline capitalize"
+                            href={'/' + link}
+                        >
+                            {link}
+                        </a>
+                    </div>
+                ))}
+            </div>
             <a
                 href="#"
                 className="mr-[5%] text-black-800 font-paragraph text-sm hover:text-primary"
@@ -39,18 +53,20 @@ const Navbar: FC = () => {
                 </svg>
             </a>
             {/* hamburger menu icon */}
-            <svg
-                className="lg:hidden w-[5vw] h-[5vw]"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 64 64"
-                stroke-width="3"
-                stroke="currentColor"
-                fill="none"
-            >
-                <line x1="7.68" y1="32" x2="56.32" y2="32" />
-                <line x1="7.68" y1="15.97" x2="56.32" y2="15.97" />
-                <line x1="7.68" y1="48.03" x2="56.32" y2="48.03" />
-            </svg>
+            <div className="hover:shadow-md p-[2vw] md:p-[1vw] rounded-md">
+                <svg
+                    className="lg:hidden w-[5vw] h-[5vw]"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 64 64"
+                    stroke-width="3"
+                    stroke="currentColor"
+                    fill="none"
+                >
+                    <line x1="7.68" y1="32" x2="56.32" y2="32" />
+                    <line x1="7.68" y1="15.97" x2="56.32" y2="15.97" />
+                    <line x1="7.68" y1="48.03" x2="56.32" y2="48.03" />
+                </svg>
+            </div>
             {/* close menu icon */}
             <svg
                 className="hidden w-[5vw] h-[5vw]"
