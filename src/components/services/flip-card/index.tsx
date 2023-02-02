@@ -8,11 +8,35 @@ export const FlipCard = ({ service }: { service: any }) => {
     const toggleFlip = () => {
         setFlip(!flip)
     }
-    /*
-	 TODO: add scroll effect
-	useEffect(() => ({
-		window.addEventListener('scroll')
-	}) */
+
+    // TODO: add scroll effect
+    const scrollHandler = () => {
+        console.log(card.current)
+        console.log(card.current && card.current.getBoundingClientRect())
+        const top = card.current && card.current.getBoundingClientRect().top
+        const bottom =
+            card.current && card.current.getBoundingClientRect().bottom
+        const height = window.screen.height
+        if (
+            bottom &&
+            top &&
+            top >= 0 &&
+            bottom >= 0 &&
+            bottom <= height &&
+            top <= height
+        ) {
+            setFlip(true)
+        } else {
+            setFlip(false)
+        }
+    }
+
+    useEffect(() => {
+        window.addEventListener('scroll', scrollHandler, true)
+        return () => {
+            window.removeEventListener('scroll', scrollHandler, true)
+        }
+    }, [])
     return (
         <div
             ref={card}
