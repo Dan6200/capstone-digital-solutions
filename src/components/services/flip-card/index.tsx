@@ -11,12 +11,12 @@ export const FlipCard = ({ service }: { service: any }) => {
 
     // TODO: add scroll effect
     const scrollHandler = () => {
-        console.log(card.current)
-        console.log(card.current && card.current.getBoundingClientRect())
         const top = card.current && card.current.getBoundingClientRect().top
         const bottom =
             card.current && card.current.getBoundingClientRect().bottom
         const height = window.screen.height
+        const width = window.screen.width
+        if (width > 1028) return
         if (
             bottom &&
             top &&

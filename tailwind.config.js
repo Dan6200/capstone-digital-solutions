@@ -50,6 +50,10 @@ module.exports = {
 				'mobile-4xl':'3.81vw',
                 'mobile-5xl':'4.77vw',
                 'mobile-6xl':'5.96vw',
+			},
+			boxShadow: {
+				'card-front': '-1px 12px 32px -2px rgba(10, 36, 255, 0.3)',
+				'card-back': '-1px 12px 32px -2px rgba(22, 171, 255, 0.7)'
 			}
 		},
   },
