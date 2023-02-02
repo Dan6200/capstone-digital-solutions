@@ -7,15 +7,12 @@ const links = ['about', 'contact', 'services', 'portfolio', 'articles']
 export const FlatMenu: FC = () => {
     return (
         <div className="flex justify-between items-center w-full md:h-[5vw] h-[10vw]">
-            <a
-                className="lg:w-[30vw] w-[70vw] sm:w-[50vw] md:w-[50vw] block"
-                href="/"
-            >
+            <a className="lg:w-[30vw] w-[70vw] md:w-[50vw] block" href="/">
                 <Logo />
             </a>
-            <div className="flex gap-[5%] w-[50%] justify-end">
+            <div className="hidden lg:flex gap-[5%] w-[50%] justify-end">
                 {links.map((link) => (
-                    <div className="hidden lg:flex">
+                    <div className="">
                         <a
                             className="hover:text-primary mr-[5%] text-black-800 font-paragraph text-md xl:text-sm no-underline capitalize"
                             href={'/' + link}

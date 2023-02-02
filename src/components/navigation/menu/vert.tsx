@@ -1,10 +1,9 @@
 import React, { useState } from 'react'
+import { SearchBar } from './search-bar'
 
 const links = ['about', 'contact', 'services', 'portfolio', 'articles'],
     menuBtnStyling =
-        'text-black-800 self-end w-[6vw] h-[6vw] md:w-[3vw] md:h-[3vw] m-[2vw] md:m-[1vw]',
-    inputStyle =
-        'font-paragraph focus-visible:outline-none focus:border-[1px] focus:border-primary rounded-md border-[1px] w-[70%] bg-black-400 text-black-700 border-black-500 capitalize p-[1vw] lg:p-[1vw]'
+        'text-black-800 self-end w-[6vw] h-[6vw] md:w-[3vw] md:h-[3vw] m-[2vw] md:m-[1vw]'
 
 export const VertMenu = () => {
     const [showMenu, setShowMenu] = useState(false)
@@ -57,25 +56,7 @@ export const VertMenu = () => {
                         </a>
                     </div>
                 ))}
-                {/* search icon */}
-                <div className="flex items-center border-t-[1pt] justify-center p-[1vw] w-full border-black-500">
-                    <input
-                        name="search box"
-                        type="text"
-                        className={inputStyle}
-                    />
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        className="w-[6vw] md:w-[4vw] text-black-800 hover:text-primary md:m-[1vw] m-[2vw]"
-                        viewBox="0 0 64 64"
-                        stroke-width="3"
-                        stroke="currentColor"
-                        fill="none"
-                    >
-                        <circle cx="27.31" cy="25.74" r="18.1" />
-                        <line x1="39.58" y1="39.04" x2="56.14" y2="57" />
-                    </svg>
-                </div>
+                <SearchBar />
             </div>
         </div>
     )
