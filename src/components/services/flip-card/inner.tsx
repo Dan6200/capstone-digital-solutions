@@ -24,7 +24,7 @@ export const FlipCardInner = ({
                 ...(flipA
                     ? {
                           transform: 'rotateY(-180deg)',
-                          transitionDelay: '1s',
+                          transitionDelay: '1.5s',
                       }
                     : null),
                 ...(flipB

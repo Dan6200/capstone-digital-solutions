@@ -8,7 +8,8 @@ export const FlipCard = ({ service }: { service: any }) => {
     const card = useRef()
 
     const toggleFlip = () => {
-        console.log('flipped')
+        const width = window.screen.width
+        if (width > 1080) return
         setFlipB(!flipB)
         setFlipA(false)
     }
@@ -20,7 +21,7 @@ export const FlipCard = ({ service }: { service: any }) => {
             card.current && card.current.getBoundingClientRect().bottom
         const height = window.screen.height
         const width = window.screen.width
-        if (width > 1028) return
+        if (width > 1080) return
         setFlipB(false)
         if (
             bottom &&
@@ -31,8 +32,6 @@ export const FlipCard = ({ service }: { service: any }) => {
             top <= height
         ) {
             setFlipA(true)
-        } else {
-            setFlipA(false)
         }
     }
 
