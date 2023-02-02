@@ -4,7 +4,7 @@ import { Logo } from './logo'
 
 const links = ['about', 'contact', 'services', 'portfolio', 'articles']
 const menuBtnStyling =
-    'self-end w-[16pt] h-[16pt] md:w-[24pt] md:h-[24pt] m-[2vw] md:m-[1vw]'
+    'text-black-800 self-end w-[16pt] h-[16pt] md:w-[24pt] md:h-[24pt] m-[2vw] md:m-[1vw]'
 
 const Navbar: FC = () => {
     const [showMenu, setShowMenu] = useState(false)
@@ -70,7 +70,7 @@ const Navbar: FC = () => {
                 </svg>
             </div>
             <div
-                className="hidden absolute md:top-[12vh] top-[18vh] right-[2vh] flex-col border-[1pt] hover:cursor-pointer bg-white shadow-sm w-[50vw] hover:shadow-md rounded-md md:rounded-lg"
+                className="hidden absolute md:top-[15vw] top-[30vw] right-[5vw] flex-col border-[1pt] hover:cursor-pointer bg-white shadow-sm w-[50vw] hover:shadow-md rounded-md md:rounded-lg"
                 style={{ ...(showMenu ? { display: 'flex' } : null) }}
             >
                 {/* close menu icon */}
