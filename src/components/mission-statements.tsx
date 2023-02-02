@@ -1,10 +1,11 @@
 import React, { FC } from 'react'
 
+const shapeStyling =
+    'w-[30%] sm:w-[50%] sm:h-[120vw] xl:h-[60vw] lg:h-[80vw] md:h-[90vw] h-[200vw]'
 const paragraphs = [
     `
             We are an Abuja based IT agency, specializing in creating digital
-            products to help showcase your business or as the basis of your
-            business. 			`,
+            products and services that are necessary for business.`,
     `
 		Our mission is to provide innovative and effective web design and digital marketing solutions that help our clients achieve their business goals and enhance their online presence. We strive to create visually stunning websites that are user-friendly, responsive, and optimized for search engines; create digital marketing campaigns that actually convert to real paying customers, while maintaining the highest standards of customer service and satisfaction. 	`,
     `
@@ -18,13 +19,13 @@ const paragraphs = [
 ]
 
 export const MissionStatement: FC = () => (
-    <section className="max-w-2xl w-[50%] h-[1024px] p-2 mx-auto mb-64 overflow-visible ">
+    <section className="w-[90%] lg:w-[50%] xl:w-[40%] md:w-[70%] mb-[50vw] sm:mb-[40vw] md:mb-[30vw] lg:mb-[20vw] mx-auto overflow-visible">
         <div
             style={{
-                shapeOutside: `polygon(0px 0px, 70.82% -6px, 30.05% 8.08%, 14.65% 17.20%, 6% 32.6%, 0px 50%, 6% 65.6%, 23.4% 82.7%, 50% 94%, 98% 100%, 1px 99.9%)`,
+                shapeOutside: `polygon(0px 0px, 86.77% -1px, 59.88% 6.08%, 35.23% 14.04%, 6% 32.6%, 0px 50%, 6% 65.6%, 23.4% 82.7%, 50% 94%, 98% 100%, 1px 99.9%)`,
                 float: 'left',
             }}
-            className="w-[50%] h-[1024px] "
+            className={shapeStyling}
         ></div>
         <div
             style={{
@@ -43,14 +44,14 @@ export const MissionStatement: FC = () => (
 					    )`,
                 float: 'right',
             }}
-            className="w-[50%] h-[1024px] "
+            className={shapeStyling}
         ></div>
-        <div className="my-[15%]">
-            <h3 className="w-64 mx-auto mb-16 text-xl italic font-light text-center capitalize border-b-2 border-primary text-black-900 font-heading">
+        <div className="text-3xl lg:text-lg xl:text-md md:text-xl sm:text-2xl">
+            <h3 className="pt-[10vw] md:pt-[5vw] text-4xl md:text-3xl lg:text-2xl mb-[5vw] mx-auto italic w-[50%] font-light text-center capitalize border-b-2 border-primary text-black-900 font-heading">
                 what we do
             </h3>
             {paragraphs.map((paragraph) => (
-                <p className="mb-8 italic text-center break-words text-black-800 text-md font-paragraph">
+                <p className="text-center break-words text-black-800 font-paragraph">
                     {paragraph}
                 </p>
             ))}
