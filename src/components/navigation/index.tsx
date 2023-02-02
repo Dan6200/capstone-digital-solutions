@@ -4,7 +4,7 @@ import { Logo } from './logo'
 
 const links = ['about', 'contact', 'services', 'portfolio', 'articles']
 const menuBtnStyling =
-    'self-end border-[1pt] shadow-sm p-[1vw] rounded-md md:w-[5vw] md:h-[5vw] w-[8vw] h-[8vw] m-[2vw]'
+    'self-end w-[16pt] h-[16pt] md:w-[24pt] md:h-[24pt] m-[2vw] md:m-[1vw]'
 
 const Navbar: FC = () => {
     const [showMenu, setShowMenu] = useState(false)
@@ -16,10 +16,7 @@ const Navbar: FC = () => {
 
     return (
         <nav className="flex justify-between items-center w-full md:h-[5vw] h-[10vw]">
-            <a
-                className="mr-[5%] lg:w-[30vw] w-[90vw] sm:w-[70vw] md:w-[50vw]"
-                href="/"
-            >
+            <a className="lg:w-[30vw] w-[70vw] md:w-[50vw]" href="/">
                 <Logo />
             </a>
             <div className="flex gap-[5%] w-fit">
@@ -73,7 +70,7 @@ const Navbar: FC = () => {
                 </svg>
             </div>
             <div
-                className="hidden absolute top-[7vh] right-[2vh] flex-col border-[1pt] hover:cursor-pointer bg-white shadow-sm w-[50vw] hover:shadow-md rounded-md"
+                className="hidden absolute md:top-[12vh] top-[18vh] right-[2vh] flex-col border-[1pt] hover:cursor-pointer bg-white shadow-sm w-[50vw] hover:shadow-md rounded-md md:rounded-lg"
                 style={{ ...(showMenu ? { display: 'flex' } : null) }}
             >
                 {/* close menu icon */}
@@ -92,7 +89,7 @@ const Navbar: FC = () => {
                 {links.map((link) => (
                     <div className="">
                         <a
-                            className="w-full no-underline capitalize border-t-[1pt] p-[2vw] z-10 block active:text-primary text-black-800 font-paragraph text-3xl"
+                            className="w-full no-underline capitalize border-t-[1pt] md:p-[1vw] p-[2vw] z-10 block active:text-primary text-black-800 font-paragraph md:text-xl text-3xl"
                             href={'/' + link}
                         >
                             {link}
