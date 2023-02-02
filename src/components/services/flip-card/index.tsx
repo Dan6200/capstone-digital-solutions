@@ -2,11 +2,15 @@ import React, { useEffect, useRef, useState } from 'react'
 import { FlipCardInner } from './inner'
 
 export const FlipCard = ({ service }: { service: any }) => {
-    const [flip, setFlip] = useState(false)
+    // You have two flips that happen at different speeds
+    const [flipA, setFlipA] = useState(false)
+    const [flipB, setFlipB] = useState(false)
     const card = useRef()
 
     const toggleFlip = () => {
-        setFlip(!flip)
+        console.log('flipped')
+        setFlipB(!flipB)
+        setFlipA(false)
     }
 
     // TODO: add scroll effect
@@ -17,6 +21,7 @@ export const FlipCard = ({ service }: { service: any }) => {
         const height = window.screen.height
         const width = window.screen.width
         if (width > 1028) return
+        setFlipB(false)
         if (
             bottom &&
             top &&
@@ -25,9 +30,9 @@ export const FlipCard = ({ service }: { service: any }) => {
             bottom <= height &&
             top <= height
         ) {
-            setFlip(true)
+            setFlipA(true)
         } else {
-            setFlip(false)
+            setFlipA(false)
         }
     }
 
@@ -48,7 +53,7 @@ export const FlipCard = ({ service }: { service: any }) => {
                 backgroundColor: 'transparent',
             }}
         >
-            <FlipCardInner flip={flip} service={service} />
+            <FlipCardInner flipA={flipA} flipB={flipB} service={service} />
         </div>
     )
 }

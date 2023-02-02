@@ -3,10 +3,12 @@ import { Back } from './back'
 import { Front } from './front'
 
 export const FlipCardInner = ({
-    flip,
+    flipA,
+    flipB,
     service,
 }: {
-    flip: boolean
+    flipA: boolean
+    flipB: boolean
     service: any
 }) => {
     return (
@@ -19,10 +21,15 @@ export const FlipCardInner = ({
                 textAlign: 'center',
                 transition: 'transform 2s',
                 transformStyle: 'preserve-3d',
-                ...(flip
+                ...(flipA
                     ? {
                           transform: 'rotateY(-180deg)',
                           transitionDelay: '1s',
+                      }
+                    : null),
+                ...(flipB
+                    ? {
+                          transform: 'rotateY(0deg)',
                       }
                     : null),
             }}
