@@ -37,6 +37,7 @@ export const FlipCard = ({ service }: { service: any }) => {
             window.removeEventListener('scroll', scrollHandler, true)
         }
     }, [])
+
     return (
         <div
             ref={card}

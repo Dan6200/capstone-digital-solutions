@@ -7,13 +7,12 @@ const NotFound = () => (
                 This page has not been created yet. Sorry...
             </span>
         </h1>
-        <a
-            href="#"
-            className="text-3xl text-center no-underline capitalize hover:text-primary text-black-800 font-paragraph sm:text-2xl md:text-xl lg:text-lg xl:text-md"
+        <button
+            className="p-[1pt] shadow-xl text-white active:opacity-75 font-heading font-semibold uppercase rounded-lg w-[40vw] sm:w-[30vw] md:w-[20vw] lg:w-[15vw] hover:from-primary hover:shadow-2xl hover:to-secondary bg-gradient-to-r from-secondary to-primary inline h-auto text-center"
             onClick={() => window.history.back()}
         >
-            <p className="placeholder">Go Back</p>
-        </a>
+            Go Back
+        </button>
     </div>
 )
 
