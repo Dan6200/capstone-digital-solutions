@@ -18,6 +18,7 @@ export const FlipCardInner = ({
                 height: '100%',
                 textAlign: 'center',
                 transition: 'transform 2s',
+                transitionDelay: '1s',
                 transformStyle: 'preserve-3d',
                 ...(flip ? { transform: 'rotateY(-180deg)' } : null),
             }}
