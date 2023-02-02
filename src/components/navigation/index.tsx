@@ -70,7 +70,7 @@ const Navbar: FC = () => {
                 </svg>
             </div>
             <div
-                className="hidden absolute md:top-[15vw] top-[30vw] right-[5vw] flex-col border-[1pt] hover:cursor-pointer bg-white shadow-sm w-[50vw] hover:shadow-md rounded-md md:rounded-lg"
+                className="hidden absolute md:top-[17vw] top-[25vw] right-[5vw] md:right-[2vw] flex-col border-[1pt] hover:cursor-pointer bg-white shadow-sm w-[50vw] hover:shadow-md rounded-md md:rounded-lg"
                 style={{ ...(showMenu ? { display: 'flex' } : null) }}
             >
                 {/* close menu icon */}
