@@ -12,7 +12,7 @@ const NotFound = () => (
         </h1>
         <button
             className="p-[1pt] shadow-xl lg:mb-[20vw] md:mb-[30vw] sm:mb-[50vw] mb-[60vw] xl:leading-[4vw] lg:leading-[6vw] md:leading-[8vw] sm:leading-[10vw] leading-[12vw] text-white active:opacity-75 font-heading font-semibold uppercase rounded-lg w-[40vw] sm:w-[30vw] md:w-[20vw] lg:w-[15vw] hover:from-black-700 hover:shadow-2xl hover:to-black-900 bg-gradient-to-r from-black-900 to-black-700 inline h-auto text-center"
-            onClick={() => window && window.history.back()}
+            onClick={() => window && window.history && window.history.back()}
         >
             Go Back
         </button>

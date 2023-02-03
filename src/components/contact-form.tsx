@@ -2,19 +2,19 @@
 import React, { FC } from 'react'
 
 const fields = [
-        { name: 'name', type: 'text', text: 'your name', style: '' },
-        { name: 'email', text: 'your email', type: 'email', style: '' },
-        { name: 'budget', text: 'your budget', type: 'text', style: '' },
+        { name: 'name', type: 'text', text: 'Your Name', style: '' },
+        { name: 'email', text: 'Your Email', type: 'email', style: '' },
+        { name: 'budget', text: 'Your Budget', type: 'text', style: '' },
     ],
     inputStyle =
-        'font-paragraph focus-visible:outline-none focus:border-[1px] focus:border-primary rounded-md mb-[3vw] lg:mb-[1vw] border-[1px] w-full bg-black-400 text-black-700 border-black-500 capitalize p-[2vw] lg:p-[1vw] xl:p-[0.5vw]'
+        'font-paragraph focus-visible:outline-none focus:border-[1px] focus:border-primary rounded-md mb-[3vw] lg:mb-[1vw] border-[1px] w-full bg-black-400 text-black-700 border-black-500 p-[2vw] lg:p-[1vw] xl:p-[5pt]'
 // TODO: Break this up!!!
 const ContactForm: FC = () => (
-    <div className="text-mobile-4xl xl:text-md lg:text-mobile-lg md:text-mobile-2xl sm:text-mobile-3xl flex lg:flex-row flex-col gap-[5vw] lg:gap-[3vw] justify-between w-[80%] sm:w-[70%] lg:w-[80%] mx-auto md:mb-[20vw] sm:mb-[40vw] mb-[60vw] bg-color">
+    <div className="text-mobile-4xl xl:text-sm lg:text-mobile-lg md:text-mobile-2xl sm:text-mobile-3xl flex lg:flex-row flex-col gap-[5vw] lg:gap-[3vw] justify-between w-[80%] sm:w-[70%] lg:w-[80%] mx-auto md:mb-[20vw] sm:mb-[40vw] mb-[60vw] bg-color">
         <div className="my-auto text-5xl font-semibold text-center capitalize lg:text-left md:text-3xl lg:text-2xl sm:text-4xl text-black-900 font-heading">
             <h3>One-Stop shop for your business' digital needs...</h3>
         </div>
-        <form className="w-full lg:w-[70%] xl:w-[50%] mx-auto">
+        <form className="w-full lg:w-[70%] xl:w-[60%] mx-auto">
             {fields.map(
                 (f) =>
                     f.name != 'budget' && (
@@ -27,8 +27,8 @@ const ContactForm: FC = () => (
                     )
             )}
             <textarea
-                placeholder="describe what services your business requires"
-                className="font-paragraph w-full resize-none focus-visible:outline-none focus:border-[1px] focus:border-primary rounded-md lg:mb-[1vw] mb-[3vw] border-[1px] bg-black-400 text-black-700 border-black-500 capitalize xl:p-[0.5vw] lg:p-[1vw] p-[2vw] lg:h-[15vw] h-[30vw]"
+                placeholder="Describe What Services Your Business Requires"
+                className="font-paragraph w-full resize-none focus-visible:outline-none focus:border-[1px] focus:border-primary rounded-md lg:mb-[1vw] mb-[3vw] border-[1px] bg-black-400 text-black-700 border-black-500 xl:p-[5pt] lg:p-[1vw] p-[2vw] lg:h-[15vw] h-[30vw]"
             ></textarea>
             <input
                 name={fields[2].name}
