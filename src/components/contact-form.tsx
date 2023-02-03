@@ -36,7 +36,7 @@ const ContactForm: FC = () => (
                 placeholder={fields[2].text}
                 className={inputStyle}
             />
-            <button className="block h-auto w-full xl:leading-[5vw] lg:leading-[6vw] sm:leading-[10vw] md:leading-[9vw] leading-[15vw] rounded-md bg-gradient-to-br from-secondary to-primary">
+            <button className="block h-auto w-full xl:leading-[4vw] lg:leading-[6vw] sm:leading-[10vw] md:leading-[9vw] leading-[15vw] rounded-md bg-gradient-to-br from-secondary to-primary">
                 <span className="inline lg:mr-[1.5vw] mr-[5vw] font-semibold text-white uppercase font-heading">
                     send message
                 </span>
