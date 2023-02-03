@@ -28,7 +28,7 @@ export const FlatMenu: FC = () => {
                     {/* search icon */}
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
-                        className="hidden w-full lg:block"
+                        className="hidden w-[1.5vw] lg:block"
                         viewBox="0 0 64 64"
                         stroke-width="3"
                         stroke="currentColor"
