@@ -6,7 +6,7 @@ const links = ['about', 'contact', 'services', 'portfolio', 'articles']
 
 export const FlatMenu: FC = () => {
     return (
-        <div className="flex justify-between items-center w-full md:h-[5vw] h-[10vw]">
+        <div className="flex justify-between items-end w-full md:h-[5vw] h-[10vw]">
             <a className="lg:w-[30vw] w-[70vw] md:w-[50vw] block" href="/">
                 <Logo />
             </a>
