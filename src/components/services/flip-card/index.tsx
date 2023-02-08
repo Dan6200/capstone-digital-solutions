@@ -1,7 +1,13 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { FlipCardInner } from './inner'
 
-export const FlipCard = ({ service }: { service: any }) => {
+export const FlipCard = ({
+    service,
+    index,
+}: {
+    service: any
+    index: number
+}) => {
     // You have two flips that happen at different speeds
     const [flipA, setFlipA] = useState(false)
     const [flipB, setFlipB] = useState(false)
@@ -52,7 +58,12 @@ export const FlipCard = ({ service }: { service: any }) => {
                 backgroundColor: 'transparent',
             }}
         >
-            <FlipCardInner flipA={flipA} flipB={flipB} service={service} />
+            <FlipCardInner
+                flipA={flipA}
+                flipB={flipB}
+                service={service}
+                index={index}
+            />
         </div>
     )
 }

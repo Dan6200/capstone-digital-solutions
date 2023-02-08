@@ -47,7 +47,7 @@ export const MissionStatement: FC = () => (
             className={shapeStyling}
         ></div>
         <div className="text-3xl lg:text-lg xl:text-md md:text-xl sm:text-2xl">
-            <h3 className="pt-[10vw] md:pt-[5vw] text-4xl md:text-3xl lg:text-2xl mb-[5vw] mx-auto italic w-[50%] font-light text-center capitalize border-b-2 border-primary text-black-900 font-heading">
+            <h3 className="pt-[10vw] md:pt-[5vw] text-4xl md:text-3xl lg:text-2xl xl:text-xl mb-[4vw] mx-auto italic w-[45%] font-light text-center capitalize border-b-2 border-primary text-black-900 font-heading">
                 what we do
             </h3>
             {paragraphs.map((paragraph) => (

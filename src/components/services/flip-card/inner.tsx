@@ -6,10 +6,12 @@ export const FlipCardInner = ({
     flipA,
     flipB,
     service,
+    index,
 }: {
     flipA: boolean
     flipB: boolean
     service: any
+    index: number
 }) => {
     return (
         <div
@@ -35,7 +37,7 @@ export const FlipCardInner = ({
             }}
         >
             <Front service={service} />
-            <Back service={service} />
+            <Back service={service} index={index} />
         </div>
     )
 }

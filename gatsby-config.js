@@ -11,7 +11,6 @@ module.exports = {
   siteMetadata: {
     title: `My Site`,
 	  author: 'dan',
-	  description: 'learning to build with gatsbyjs'
   },
   plugins: [
 	   'gatsby-plugin-postcss',

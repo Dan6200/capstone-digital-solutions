@@ -1,7 +1,7 @@
 export let services: object[] = [
     {
-        h: 'brand and logo design',
-        p: 'We build recognizable branding that reflects your business values',
+        h: 'branding',
+        p: 'Establish customer loyalty and trust by building a unique identity and image for your product, service, or business, one that creates a strong and recognizable presence in your industry.',
     },
     {
         h: 'web design',
@@ -22,5 +22,9 @@ export let services: object[] = [
     {
         h: 'search engine marketing',
         p: 'Capture the eyes of people searching for a product or service that you offer.',
+    },
+    {
+        h: 'social media marketing',
+        p: '',
     },
 ]

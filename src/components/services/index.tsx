@@ -18,8 +18,8 @@ const Services: FC = () => {
                 Our services
             </h3>
             <div className="mx-auto w-[80%] md:w-[80%] sm:w-[60%] grid gap-[20vw] lg:gap-[5vw] md:gap-[10vw] sm:gap-[15vw] grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-                {services.map((service) => (
-                    <FlipCard service={service} />
+                {services.map((service, index) => (
+                    <FlipCard service={service} index={index} />
                 ))}
             </div>
         </section>

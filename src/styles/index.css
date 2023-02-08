@@ -7,3 +7,7 @@
 html {
     scroll-behavior: smooth;
 }
+
+.header {
+    transition: all 0.4s ease-in-out;
+}

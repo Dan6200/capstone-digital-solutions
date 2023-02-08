@@ -5,7 +5,7 @@ import { VertMenu } from './menu/vert'
 
 const Navbar: FC = () => {
     return (
-        <nav className="flex justify-between items-center w-full md:h-[5vw] h-[10vw]">
+        <nav className="flex items-center justify-between w-full h-fit">
             <FlatMenu />
             <VertMenu />
         </nav>

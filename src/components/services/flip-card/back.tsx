@@ -1,6 +1,7 @@
 import React from 'react'
+import { content } from '../../../pages/services/content'
 
-export const Back = ({ service }: { service: any }) => {
+export const Back = ({ service, index }: { service: any; index: number }) => {
     return (
         <div
             style={{
@@ -10,9 +11,28 @@ export const Back = ({ service }: { service: any }) => {
             }}
             className="absolute flex flex-col justify-center w-full h-full mx-auto text-white border-2 border-white shadow-card-back bg-gradient-to-br from-black-900 to-secondary"
         >
-            <p className="w-[80%] mx-auto  h-auto text-3xl sm:text-2xl md:text-xl lg:text-md text-center font-paragraph">
-                {service.p}
-            </p>
+            <div className="flex flex-col justify-between w-[80%] h-[60%] mx-auto mt-[10%]">
+                <p className="text-3xl text-center sm:text-2xl md:text-xl lg:text-md font-paragraph">
+                    {service.p}
+                </p>
+                <a
+                    className="self-end w-[15vw] text-right hover:text-primary text-white font-paragraph text-md xl:text-sm no-underline capitalize"
+                    href={'/services/#' + content[index].heading.split(' ')[0]}
+                >
+                    <p className="inline">Learn more</p>
+                    <svg
+                        className="inline w-[20%] ml-[10%]"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 64 64"
+                        stroke-width="3"
+                        stroke="currentColor"
+                        fill="none"
+                    >
+                        <line x1="55.78" y1="32.63" x2="10.33" y2="32.63" />
+                        <polyline points="38.55 14.63 55.78 32.79 38.55 49.32" />
+                    </svg>
+                </a>
+            </div>
         </div>
     )
 }

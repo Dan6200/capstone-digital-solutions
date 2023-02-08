@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
+import links from './links'
 import { SearchBar } from './search-bar'
 
-const links = ['about', 'contact', 'services', 'portfolio', 'articles'],
-    menuBtnStyling =
-        'text-black-800 self-end w-[6vw] h-[6vw] md:w-[3vw] md:h-[3vw] m-[2vw] md:m-[1vw]'
+let menuBtnStyling =
+    'text-black-800 self-end w-[6vw] h-[6vw] md:w-[3vw] md:h-[3vw] m-[2vw] md:m-[1vw]'
 
 export const VertMenu = () => {
     const [showMenu, setShowMenu] = useState(false)

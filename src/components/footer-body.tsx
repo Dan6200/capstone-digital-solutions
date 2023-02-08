@@ -7,7 +7,7 @@ const FooterBody: FC = () => {
             <h4 className="mb-[10vw] md:mb-[8vw] lg:mb-[6vw] xl:mb-[4vw] text-5xl font-semibold capitalize sm:text-4xl md:text-3xl lg:text-2xl xl:text-xl font-heading">
                 let us bring your business online
             </h4>
-            <p className="mb-[10vw] md:mb-[8vw] lg:mb-[6vw] xl:mb-[4vw] text-3xl sm:text-2xl md:text-xl lg:text-lg xl:text-md text-black-800 font-paragraph">
+            <p className="mb-[10vw] md:mb-[8vw] lg:mb-[6vw] xl:w-[60%] xl:mb-[4vw] text-3xl sm:text-2xl md:text-xl lg:text-lg xl:text-md text-black-800 font-paragraph">
                 If you are looking for an agency with exceptional quality and a
                 client-centric approach, we absolutely look forward to working
                 with you and taking your business to new heights!
