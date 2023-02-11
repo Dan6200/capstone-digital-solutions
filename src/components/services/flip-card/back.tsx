@@ -16,7 +16,7 @@ export const Back = ({ service, index }: { service: any; index: number }) => {
                     {service.p}
                 </p>
                 <a
-                    className="self-end w-[15vw] text-right hover:text-primary text-white font-paragraph text-md xl:text-sm no-underline capitalize"
+                    className="self-end w-[50%] text-right hover:text-primary text-white font-paragraph xl:text-xs no-underline capitalize text-2xl sm:text-xl md:text-lg lg:text-sm"
                     href={'/services/#' + content[index].heading.split(' ')[0]}
                 >
                     <p className="inline">Learn more</p>

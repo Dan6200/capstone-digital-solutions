@@ -18,7 +18,6 @@ const Header: FC = () => {
             setScrollStyle(true)
         } else setScrollStyle(false)
         top1 = top
-        console.log(top, showAtTop)
     }
 
     useEffect(() => {
@@ -41,11 +40,10 @@ const Header: FC = () => {
                     : null),
                 ...(scrollStyle
                     ? {
-                          borderBottomWidth: 1,
                           opacity: 1,
                           boxShadow: `0px 0px 2px 2px rgba(0,0,0,0.1)`,
-                          WebkitBoxShadow: '0px 0px 2px 2px rgba(0,0,0,0.1)',
-                          MozBoxShadow: '0px 0px 2px 2px rgba(0,0,0,0.1)',
+                          WebkitBoxShadow: '0px 0px 2px 3px rgba(0,0,0,0.1)',
+                          MozBoxShadow: '0px 0px 2px 3px rgba(0,0,0,0.1)',
                           backgroundColor: 'rgb(255,252,247,0.75)',
                       }
                     : null),

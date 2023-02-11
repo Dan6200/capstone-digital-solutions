@@ -74,7 +74,7 @@ In addition to content creation and management, we provide community management 
             `
 Our goal is to help businesses effectively reach and engage with their target audience on social media, drive results, and build their brand. Our services can be customized to meet the specific needs and goals of each client, ensuring that they receive a highly effective and cost-efficient solution.`,
             `
-We also provide social media advertising services to help businesses reach and engage with their target audience on social media platforms. Our services include the creation and management of targeted social media ads, such as sponsored posts, display ads, and video ads, on platforms like Facebook, Instagram, Twitter, TikTok, and LinkedIn.`,
+We also provide social media advertising services. Our services include the creation and management of targeted social media ads, such as sponsored posts, display ads, and video ads, on platforms like Facebook, Instagram, TikTok, and LinkedIn.`,
             `
 We work with clients to develop a targeted advertising strategy that aligns with their marketing goals and target audience. We create compelling and visually appealing ads that are designed to drive engagement and conversions.`,
             `

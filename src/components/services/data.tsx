@@ -1,11 +1,11 @@
 export let services: object[] = [
     {
         h: 'branding',
-        p: 'Establish customer loyalty and trust by building a unique identity and image for your product, service, or business, one that creates a strong and recognizable presence in your industry.',
+        p: 'Establish customer loyalty and trust by building a unique identity and image for your product, service, or business.',
     },
     {
         h: 'web design',
-        p: 'Eye catching unique designs that showcase what is best about your products and/or services.',
+        p: 'Eye catching and unique website designs that showcase what is best about your products and/or services.',
     },
     {
         h: 'software development',
@@ -17,7 +17,7 @@ export let services: object[] = [
     },
     {
         h: 'search engine optimization',
-        p: 'Get organic growth from Google by improving the quality of your website and its usefulness to your customers',
+        p: 'Improve the visibility and ranking of your website in search engine result pages, such as Google',
     },
     {
         h: 'search engine marketing',
@@ -25,6 +25,6 @@ export let services: object[] = [
     },
     {
         h: 'social media marketing',
-        p: '',
+        p: 'Reach and engage with your target audience on social media platforms such as Facebook, LinkedIn, Instagram, and TikTok',
     },
 ]
