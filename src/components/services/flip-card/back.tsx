@@ -1,5 +1,5 @@
 import React from 'react'
-import { content } from '../../../pages/services/content'
+import { content } from '../../../data/services/content'
 
 export const Back = ({ service, index }: { service: any; index: number }) => {
     return (
