@@ -40,9 +40,6 @@ Our goal is to help businesses reach their target audience when they're actively
 `,
         ],
     },
-]
-/*
-    ,
     {
         heading: 'software development',
         body: [
@@ -53,8 +50,6 @@ Our development process typically begins with requirements gathering, during whi
 `,
         ],
     },
-    ,
-    ,
     {
         heading: 'search engine optimization',
         body: [
@@ -67,6 +62,12 @@ Our SEO services may include keyword research, on-page optimization, technical S
 Our goal is to help businesses increase their organic search visibility and drive more qualified traffic to their website. By using best practices and up-to-date techniques, we help businesses rank higher in search results, reach their target audience, and grow their business. Our SEO services can be tailored to meet the specific needs and goals of each client, ensuring that they receive a highly effective and cost-efficient solution.`,
         ],
     },
+]
+/*
+    ,
+    ,
+    ,
+    ,
     {
         heading: 'Social media marketing',
         body: [

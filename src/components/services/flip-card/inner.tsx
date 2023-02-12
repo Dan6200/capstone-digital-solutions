@@ -18,7 +18,7 @@ export const FlipCardInner = ({
             className={
                 'flip-card-inner' +
                 ((flipA && ' flipA') || '') +
-                ((flipB && ' flipB') || ' dont-flip')
+                ((flipB && ' flipB') || '')
             }
             style={{}}
         >

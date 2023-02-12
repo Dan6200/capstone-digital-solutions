@@ -14,6 +14,7 @@ html {
 
 .flip-card:hover .flip-card-inner {
     transform: rotateY(-180deg);
+    transition-delay: 0.5s;
 }
 
 .flip-card-inner {
@@ -29,9 +30,6 @@ html {
 
 .flipA {
     transition-delay: 1.5s;
-}
-.dont-flip {
-    transform: rotateY(0deg) !important;
 }
 .flipB {
     transform: rotateY(-180deg) !important;

@@ -23,8 +23,11 @@ export let services: object[] = [
         h: 'search engine marketing',
         p: 'Capture the eyes of people searching for a product or service that you offer.',
     },
+]
+/*
     {
         h: 'social media marketing',
         p: 'Reach and engage with your target audience on social media platforms such as Facebook, LinkedIn, Instagram, and TikTok',
     },
 ]
+	 */
