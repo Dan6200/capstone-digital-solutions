@@ -1,42 +1,54 @@
 //cspell:ignore Topbar
-import React, { FC, useLayoutEffect, useRef, useState } from 'react'
+import React, { FC, useEffect, useLayoutEffect, useRef, useState } from 'react'
 import Navbar from './navigation'
 import Topbar from './top-bar'
 
+let ranAlready = false
+
 const Header: FC = () => {
-    let [scrollStyle, setScrollStyle] = useState(false)
+    let [showHead, setShowHead] = useState(false)
     let [showAtTop, setShowAtTop] = useState(true)
     let header = useRef()
-    let top1: number
 
-    let scrollHandler = () => {
-        let top = header.current && header.current.offsetTop
-        if (top === 0) {
-            setShowAtTop(true)
-        } else setShowAtTop(false)
-        if (top1 && top !== 0 && top1 > top) {
-            setScrollStyle(true)
-        } else setScrollStyle(false)
-        top1 = top
+    // fix this
+    let showHeader = () => {
+        console.log('runs', ranAlready)
+        if (showAtTop) return
+        setShowHead(true)
+        if (ranAlready) return
+        ranAlready = true
+        timer = setTimeout(() => {
+            setShowHead(false)
+            ranAlready = false
+        }, 500)
     }
 
-    useLayoutEffect(() => {
-        window.addEventListener('scroll', scrollHandler, true)
+    useEffect(() => {
+        window.addEventListener('mousemove', showHeader, true)
         return () => {
-            window.removeEventListener('scroll', scrollHandler, true)
+            window.removeEventListener('mousemove', showHeader, true)
         }
     }, [])
 
-    let hideHeader = () => {
-        console.log('runs')
+    let showHeaderAtTop = () => {
         let top = header.current && header.current.offsetTop
         if (top === 0) {
             setShowAtTop(true)
+            setShowHead(false)
         } else setShowAtTop(false)
     }
 
+    // for when page loads
     useLayoutEffect(() => {
-        hideHeader()
+        showHeaderAtTop()
+    }, [])
+
+    // for when scrolling
+    useLayoutEffect(() => {
+        window.addEventListener('scroll', showHeaderAtTop, true)
+        return () => {
+            window.removeEventListener('scroll', showHeaderAtTop, true)
+        }
     }, [])
 
     return (
@@ -51,7 +63,7 @@ const Header: FC = () => {
                           backgroundColor: 'rgb(255,252,247,0.75)',
                       }
                     : null),
-                ...(scrollStyle
+                ...(showHead
                     ? {
                           visibility: 'visible',
                           opacity: 100,
