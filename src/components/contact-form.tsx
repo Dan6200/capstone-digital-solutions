@@ -33,7 +33,7 @@ const ContactForm: FC = () => {
             )
     }
     return (
-        <div className="text-mobile-4xl xl:text-sm lg:text-mobile-lg md:text-mobile-2xl sm:text-mobile-3xl flex lg:flex-row flex-col gap-[5vw] lg:gap-[3vw] justify-between w-[80%] sm:w-[70%] lg:w-[80%] mx-auto md:mb-[20vw] sm:mb-[40vw] mb-[60vw] bg-color">
+        <div className="pt-[35vw] sm:pt-[25vw] md:pt-[15vw] lg:pt-[7vw] text-mobile-4xl xl:text-sm lg:text-mobile-lg md:text-mobile-2xl sm:text-mobile-3xl flex lg:flex-row flex-col gap-[5vw] lg:gap-[3vw] justify-between w-[80%] sm:w-[70%] lg:w-[80%] mx-auto bg-color">
             <div className="my-auto text-5xl font-semibold text-center capitalize lg:text-left md:text-3xl lg:text-2xl sm:text-4xl text-black-900 font-heading">
                 <h3>One-Stop shop for your business's digital needs...</h3>
             </div>

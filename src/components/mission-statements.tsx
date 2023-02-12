@@ -19,7 +19,7 @@ const paragraphs = [
 ]
 
 export const MissionStatement: FC = () => (
-    <section className="w-[90%] lg:w-[50%] xl:w-[40%] md:w-[70%] mb-[50vw] sm:mb-[40vw] md:mb-[30vw] lg:mb-[20vw] mx-auto overflow-visible">
+    <section className="pt-[35vw] sm:pt-[25vw] md:pt-[15vw] lg:pt-[7vw] w-[90%] lg:w-[50%] xl:w-[40%] md:w-[70%] mx-auto overflow-visible">
         <div
             style={{
                 shapeOutside: `polygon(0px 0px, 86.77% -1px, 59.88% 6.08%, 35.23% 14.04%, 6% 32.6%, 0px 50%, 6% 65.6%, 23.4% 82.7%, 50% 94%, 98% 100%, 1px 99.9%)`,
