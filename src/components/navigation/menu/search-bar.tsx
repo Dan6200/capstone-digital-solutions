@@ -1,10 +1,10 @@
 import React from 'react'
 
 const inputStyle =
-    'font-paragraph focus-visible:outline-none focus:border-[1px] focus:border-primary rounded-md border-[1px] w-[70%] bg-black-400 text-black-700 border-black-500 capitalize p-[1vw] lg:p-[1vw]'
+    'font-paragraph focus-visible:outline-none focus:border-[1px] focus:border-primary rounded-md border-[1px] w-[90%] bg-black-400 text-black-700 border-black-500 capitalize px-[3vw]'
 
 export const SearchBar = () => (
-    <div className="flex items-center border-t-[1pt] justify-center p-[1vw] w-full border-black-500">
+    <div className="flex justify-center p-[3vw] w-full border-black-500">
         <input name="search box" type="text" className={inputStyle} />
         <svg
             xmlns="http://www.w3.org/2000/svg"

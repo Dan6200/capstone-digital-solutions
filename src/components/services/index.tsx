@@ -9,11 +9,6 @@ const Services: FC = () => {
             id="services"
             className="w-auto mx-auto mb-[60vw] md:mb-[40vw] lg:mb-[30vw]"
         >
-            <style>{`
-					.flip-card:hover .flip-card-inner {
-						transform: rotateY(-180deg);
-					}
-				`}</style>
             <h3 className="content-center block w-[40vw] sm:w-[30vw] mx-auto lg:mb-[10vw] mb-[20vw] text-5xl lg:text-2xl md:text-3xl sm:text-4xl italic font-light text-center capitalize border-b-2 border-primary font-heading">
                 Our services
             </h3>

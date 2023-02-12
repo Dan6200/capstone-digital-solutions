@@ -9,5 +9,30 @@ html {
 }
 
 .header {
-    transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(-180deg);
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform;
+    transition-duration: 2s;
+    transform-style: preserve-3d;
+    transition-delay: 0s;
+}
+
+.flipA {
+    transition-delay: 1.5s;
+}
+.dont-flip {
+    transform: rotateY(0deg) !important;
+}
+.flipB {
+    transform: rotateY(-180deg) !important;
 }

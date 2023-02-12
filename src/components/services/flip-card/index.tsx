@@ -18,9 +18,10 @@ export const FlipCard = ({
         if (width > 1080) return
         setFlipB(!flipB)
         setFlipA(false)
+        console.log('runs')
     }
 
-    // TODO: add scroll effect
+    const ranOnce: any = {}
     const scrollHandler = () => {
         const top = card.current && card.current.getBoundingClientRect().top
         const bottom =
@@ -28,16 +29,19 @@ export const FlipCard = ({
         const height = window.screen.height
         const width = window.screen.width
         if (width > 1080) return
-        setFlipB(false)
+        console.log(card.current.id, ranOnce)
         if (
             bottom &&
             top &&
             top >= 0 &&
             bottom >= 0 &&
             bottom <= height &&
-            top <= height
+            top <= height &&
+            !ranOnce[card.current.id]
         ) {
             setFlipA(true)
+            setFlipB(true)
+            ranOnce[card.current.id] = true
         }
     }
 
@@ -52,6 +56,7 @@ export const FlipCard = ({
         <div
             ref={card}
             onClick={toggleFlip}
+            id={`card-${index}`}
             className="w-full flip-card h-[100vw] xl:h-[30vw] lg:h-[40vw] md:h-[60vw] sm:h-[80vw]"
             style={{
                 perspective: '1000px',

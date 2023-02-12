@@ -18,6 +18,7 @@ const Header: FC = () => {
             setScrollStyle(true)
         } else setScrollStyle(false)
         top1 = top
+        console.log(top, showAtTop)
     }
 
     useEffect(() => {
@@ -30,17 +31,19 @@ const Header: FC = () => {
     return (
         <header
             ref={header}
-            className="flex sticky header top-0 z-10 opacity-0 flex-col sm:mb-[20vw] lg:py-[1vw] sm:py-[2vw] border-black-500 w-full lg:mb-[10vw] mb-[40vw] p-[5vw]"
+            className="flex invisible opacity-0 sticky header top-0 z-10 flex-col sm:mb-[20vw] lg:py-[1vw] sm:py-[2vw] border-black-500 w-full lg:mb-[10vw] mb-[40vw] p-[5vw]"
             style={{
                 ...(showAtTop
                     ? {
+                          visibility: 'visible',
+                          opacity: 100,
                           backgroundColor: 'rgb(255,252,247,0.75)',
-                          opacity: 1,
                       }
                     : null),
                 ...(scrollStyle
                     ? {
-                          opacity: 1,
+                          visibility: 'visible',
+                          opacity: 100,
                           boxShadow: `0px 0px 2px 2px rgba(0,0,0,0.1)`,
                           WebkitBoxShadow: '0px 0px 2px 3px rgba(0,0,0,0.1)',
                           MozBoxShadow: '0px 0px 2px 3px rgba(0,0,0,0.1)',

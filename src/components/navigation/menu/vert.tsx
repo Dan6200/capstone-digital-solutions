@@ -1,9 +1,9 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import links from './links'
 import { SearchBar } from './search-bar'
 
 let menuBtnStyling =
-    'text-black-800 self-end w-[6vw] h-[6vw] md:w-[3vw] md:h-[3vw] m-[2vw] md:m-[1vw]'
+    'text-black-800 self-end justify-self flex w-[6vw] h-[6vw] md:w-[3vw] md:h-[3vw]'
 
 export const VertMenu = () => {
     const [showMenu, setShowMenu] = useState(false)
@@ -11,6 +11,18 @@ export const VertMenu = () => {
     const toggleMenu = () => {
         setShowMenu(!showMenu)
     }
+
+    let hideMenu = () => {
+        setShowMenu(false)
+    }
+
+    useEffect(() => {
+        window.addEventListener('scroll', hideMenu, true)
+        return () => {
+            window.removeEventListener('scroll', hideMenu, true)
+        }
+    }, [])
+
     return (
         <div>
             <div className="lg:hidden">
@@ -30,7 +42,7 @@ export const VertMenu = () => {
                 </svg>
             </div>
             <div
-                className="hidden absolute md:top-[17vw] top-[25vw] right-[5vw] md:right-[2vw] flex-col border-[1pt] hover:cursor-pointer bg-white shadow-sm w-[70vw] md:w-[50vw] hover:shadow-md rounded-md md:rounded-lg"
+                className="hidden absolute top-0 right-0 flex-col border-[1pt] hover:cursor-pointer bg-white shadow-sm w-[100vw] h-[100vh] p-[2vw] justify-start gap-[25vh] hover:shadow-md rounded-md md:rounded-lg"
                 style={{ ...(showMenu ? { display: 'flex' } : null) }}
             >
                 {/* close menu icon */}
@@ -46,17 +58,19 @@ export const VertMenu = () => {
                     <line x1="8.06" y1="8.06" x2="55.41" y2="55.94" />
                     <line x1="55.94" y1="8.06" x2="8.59" y2="55.94" />
                 </svg>
-                {links.map((link) => (
-                    <div className="">
-                        <a
-                            className="w-full no-underline capitalize border-t-[1pt] md:px-[3vw] px-[5vw] md:py-[1vw] py-[2vw] z-10 block active:text-primary text-black-800 font-paragraph md:text-xl text-3xl"
-                            href={'/' + link}
-                        >
-                            {link}
-                        </a>
-                    </div>
-                ))}
-                <SearchBar />
+                <div className="flex flex-col gap-[5vh] justify-center md:text-xl text-3xl">
+                    <SearchBar />
+                    {links.map((link) => (
+                        <div className="">
+                            <a
+                                className="w-full no-underline capitalize border-b-[1pt] md:px-[3vw] px-[5vw] md:py-[2vw] py-[3vw] z-10 block active:text-primary text-black-800 font-paragraph "
+                                href={'/' + link}
+                            >
+                                {link}
+                            </a>
+                        </div>
+                    ))}
+                </div>
             </div>
         </div>
     )

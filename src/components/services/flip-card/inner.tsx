@@ -15,26 +15,12 @@ export const FlipCardInner = ({
 }) => {
     return (
         <div
-            className="flip-card-inner"
-            style={{
-                position: 'relative',
-                width: '100%',
-                height: '100%',
-                textAlign: 'center',
-                transition: 'transform 2s',
-                transformStyle: 'preserve-3d',
-                ...(flipA
-                    ? {
-                          transform: 'rotateY(-180deg)',
-                          transitionDelay: '1.5s',
-                      }
-                    : null),
-                ...(flipB
-                    ? {
-                          transform: 'rotateY(0deg)',
-                      }
-                    : null),
-            }}
+            className={
+                'flip-card-inner' +
+                ((flipA && ' flipA') || '') +
+                ((flipB && ' flipB') || ' dont-flip')
+            }
+            style={{}}
         >
             <Front service={service} />
             <Back service={service} index={index} />
