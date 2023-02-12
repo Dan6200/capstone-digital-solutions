@@ -1,9 +1,8 @@
 //cspell:ignore Topbar
+import * as _ from 'lodash'
 import React, { FC, useEffect, useLayoutEffect, useRef, useState } from 'react'
 import Navbar from './navigation'
 import Topbar from './top-bar'
-
-let ranAlready = false
 
 const Header: FC = () => {
     let [showHead, setShowHead] = useState(false)
@@ -11,16 +10,13 @@ const Header: FC = () => {
     let header = useRef()
 
     // fix this
+    let debouncedFunc = _.debounce(() => {
+        setShowHead(false)
+    }, 1000)
+
     let showHeader = () => {
-        console.log('runs', ranAlready)
-        if (showAtTop) return
         setShowHead(true)
-        if (ranAlready) return
-        ranAlready = true
-        timer = setTimeout(() => {
-            setShowHead(false)
-            ranAlready = false
-        }, 500)
+        debouncedFunc()
     }
 
     useEffect(() => {
