@@ -16,7 +16,7 @@ export let content = [
         ],
     },
     {
-        heading: 'hosting and maintenance services',
+        heading: 'hosting and maintenance',
         body: [
             `
 We provide hosting and maintenance services to help businesses keep their websites and applications running smoothly and securely. Our hosting services involve providing the infrastructure and resources needed to store and deliver a website or application to customers. These include servers, storage, and bandwidth, as well as 24/7 monitoring to ensure that the website or application is always available to users.`,
@@ -41,16 +41,6 @@ Our goal is to help businesses reach their target audience when they're actively
         ],
     },
     {
-        heading: 'software development',
-        body: [
-            `
-We provide custom software development services to businesses and organizations. Our services range from the development of mobile apps to web development and cloud-based software solutions.`,
-            `
-Our development process typically begins with requirements gathering, during which we work with you to understand your business’s specific needs and goals. This is followed by the design phase, where we create a plan for the software and decide on the best technologies to use. During the coding phase, the developers create the software using modern technologies and programming languages. We also provide testing and quality assurance services to ensure that the software is reliable and meets the desired specifications. Finally, after the project is completed we offer ongoing maintenance and support to ensure that the software continues to perform effectively and meet the changing needs of your business. Our goal is to help businesses and organizations create custom software solutions that are efficient, reliable, and meet their specific needs.
-`,
-        ],
-    },
-    {
         heading: 'search engine optimization',
         body: [
             `
@@ -60,6 +50,16 @@ Our SEO services may include keyword research, on-page optimization, technical S
             `
 
 Our goal is to help businesses increase their organic search visibility and drive more qualified traffic to their website. By using best practices and up-to-date techniques, we help businesses rank higher in search results, reach their target audience, and grow their business. Our SEO services can be tailored to meet the specific needs and goals of each client, ensuring that they receive a highly effective and cost-efficient solution.`,
+        ],
+    },
+    {
+        heading: 'software development',
+        body: [
+            `
+We provide custom software development services to businesses and organizations. Our services range from the development of mobile apps to web development and cloud-based software solutions.`,
+            `
+Our development process typically begins with requirements gathering, during which we work with you to understand your business’s specific needs and goals. This is followed by the design phase, where we create a plan for the software and decide on the best technologies to use. During the coding phase, the developers create the software using modern technologies and programming languages. We also provide testing and quality assurance services to ensure that the software is reliable and meets the desired specifications. Finally, after the project is completed we offer ongoing maintenance and support to ensure that the software continues to perform effectively and meet the changing needs of your business. Our goal is to help businesses and organizations create custom software solutions that are efficient, reliable, and meet their specific needs.
+`,
         ],
     },
 ]

@@ -1,5 +1,5 @@
+import { Link } from 'gatsby'
 import React from 'react'
-import { content } from '../../../data/services/content'
 
 export const Back = ({ service, index }: { service: any; index: number }) => {
     return (
@@ -15,9 +15,9 @@ export const Back = ({ service, index }: { service: any; index: number }) => {
                 <p className="text-3xl text-center sm:text-2xl md:text-xl lg:text-md font-paragraph">
                     {service.p}
                 </p>
-                <a
+                <Link
                     className="self-end w-[50%] justify-center items-center flex text-right hover:text-tertiary text-white font-paragraph xl:text-xs no-underline capitalize text-2xl sm:text-xl md:text-lg lg:text-sm"
-                    href={'/services/#' + content[index].heading.split(' ')[0]}
+                    to={'/services/#' + service.h.replaceAll(' ', '-')}
                 >
                     <p className="inline">Learn more</p>
                     <svg
@@ -31,7 +31,7 @@ export const Back = ({ service, index }: { service: any; index: number }) => {
                         <line x1="55.78" y1="32.63" x2="10.33" y2="32.63" />
                         <polyline points="38.55 14.63 55.78 32.79 38.55 49.32" />
                     </svg>
-                </a>
+                </Link>
             </div>
         </div>
     )

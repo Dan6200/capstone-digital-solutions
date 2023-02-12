@@ -26,9 +26,7 @@ const ContactForm: FC = () => {
                 process.env.GATSBY_MY_KEY
             )
             .then(
-                (result) => {
-                    console.log(result.text)
-                },
+                (result) => {},
                 (error) => {
                     console.log(error.text)
                 }

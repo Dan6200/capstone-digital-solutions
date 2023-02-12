@@ -8,20 +8,20 @@ export let services: object[] = [
         p: 'Eye catching and unique website designs that showcase what is best about your products and/or services.',
     },
     {
-        h: 'software development',
-        p: 'We use the latest technologies to craft impactful software. We build Web Applications, Mobile Applications, and other custom software solutions.',
+        h: 'hosting and maintenance',
+        p: 'Let us handle the technical solutions that come with maintaining digital products and a digital presence.',
     },
     {
-        h: 'hosting & maintenance',
-        p: 'Let us handle the technical solutions that come with maintaining digital products and a digital presence.',
+        h: 'search engine marketing',
+        p: 'Capture the eyes of people searching for a product or service that you offer.',
     },
     {
         h: 'search engine optimization',
         p: 'Improve the visibility and ranking of your website in search engine result pages, such as Google',
     },
     {
-        h: 'search engine marketing',
-        p: 'Capture the eyes of people searching for a product or service that you offer.',
+        h: 'software development',
+        p: 'We use the latest technologies to craft impactful software. We build Web Applications, Mobile Applications, and other custom software solutions.',
     },
 ]
 /*

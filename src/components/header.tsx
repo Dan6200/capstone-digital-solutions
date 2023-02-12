@@ -1,5 +1,5 @@
 //cspell:ignore Topbar
-import React, { FC, useEffect, useRef, useState } from 'react'
+import React, { FC, useLayoutEffect, useRef, useState } from 'react'
 import Navbar from './navigation'
 import Topbar from './top-bar'
 
@@ -18,20 +18,31 @@ const Header: FC = () => {
             setScrollStyle(true)
         } else setScrollStyle(false)
         top1 = top
-        console.log(top, showAtTop)
     }
 
-    useEffect(() => {
+    useLayoutEffect(() => {
         window.addEventListener('scroll', scrollHandler, true)
         return () => {
             window.removeEventListener('scroll', scrollHandler, true)
         }
     }, [])
 
+    let hideHeader = () => {
+        console.log('runs')
+        let top = header.current && header.current.offsetTop
+        if (top === 0) {
+            setShowAtTop(true)
+        } else setShowAtTop(false)
+    }
+
+    useLayoutEffect(() => {
+        hideHeader()
+    }, [])
+
     return (
         <header
             ref={header}
-            className="flex invisible opacity-0 sticky header top-0 z-10 flex-col sm:mb-[20vw] lg:py-[1vw] sm:py-[2vw] border-black-500 w-full lg:mb-[10vw] mb-[40vw] p-[5vw]"
+            className="flex invisible opacity-0 sticky header top-0 z-10 flex-col lg:py-[1vw] sm:py-[2vw] border-black-500 w-full p-[5vw]"
             style={{
                 ...(showAtTop
                     ? {

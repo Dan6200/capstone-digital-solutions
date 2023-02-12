@@ -12,9 +12,11 @@ html {
     transition: all 0.4s ease-in;
 }
 
-.flip-card:hover .flip-card-inner {
-    transform: rotateY(-180deg);
-    transition-delay: 0.5s;
+@media (hover: hover) and (pointer: fine) {
+    .flip-card:hover .flip-card-inner {
+        transform: rotateY(-180deg);
+        transition-delay: 0.5s;
+    }
 }
 
 .flip-card-inner {

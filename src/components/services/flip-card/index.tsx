@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useLayoutEffect, useRef, useState } from 'react'
 import { FlipCardInner } from './inner'
 
 export const FlipCard = ({
@@ -18,7 +18,6 @@ export const FlipCard = ({
         if (width > 1080) return
         setFlipB(!flipB)
         setFlipA(false)
-        console.log('runs')
     }
 
     const ranOnce: any = {}
@@ -29,7 +28,6 @@ export const FlipCard = ({
         const height = window.screen.height
         const width = window.screen.width
         if (width > 1080) return
-        console.log(card.current.id, ranOnce)
         if (
             bottom &&
             top &&
@@ -45,7 +43,7 @@ export const FlipCard = ({
         }
     }
 
-    useEffect(() => {
+    useLayoutEffect(() => {
         window.addEventListener('scroll', scrollHandler, true)
         return () => {
             window.removeEventListener('scroll', scrollHandler, true)

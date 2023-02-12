@@ -9,8 +9,8 @@ const Services: React.FC = () => (
         <Header />
         {content.map((subcontent) => (
             <div
-                id={subcontent.heading.split(' ')[0]}
-                className="w-[90%] mx-auto text-3xl text-left  lg:text-lg xl:text-md md:text-xl sm:text-2xl pb-[20vw] pt-[5vw] sm:pb-[10vw] sm:pt-[2vw] md:pb-[5vw]"
+                id={subcontent.heading.replaceAll(' ', '-')}
+                className="w-[90%] mx-auto text-3xl text-left  lg:text-lg xl:text-md md:text-xl sm:text-2xl pt-[35vw] sm:pt-[25vw] md:pt-[15vw] lg:pt-[7vw]"
             >
                 <h3 className="text-4xl md:text-3xl lg:text-2xl xl:text-xl mb-[4vw] italic w-[90%] font-light capitalize border-b-2 border-primary text-black-900 font-heading">
                     {subcontent.heading}

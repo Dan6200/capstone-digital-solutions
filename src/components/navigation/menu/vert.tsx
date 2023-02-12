@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from 'react'
+import { Link } from 'gatsby'
+import React, { useLayoutEffect, useState } from 'react'
 import links from './links'
 import { SearchBar } from './search-bar'
 
@@ -16,7 +17,7 @@ export const VertMenu = () => {
         setShowMenu(false)
     }
 
-    useEffect(() => {
+    useLayoutEffect(() => {
         window.addEventListener('scroll', hideMenu, true)
         return () => {
             window.removeEventListener('scroll', hideMenu, true)
@@ -60,15 +61,19 @@ export const VertMenu = () => {
                 </svg>
                 <div className="flex flex-col gap-[5vh] justify-center md:text-xl text-3xl">
                     <SearchBar />
+                    <Link
+                        className="w-full no-underline capitalize border-b-[1pt] md:px-[3vw] px-[5vw] md:py-[2vw] py-[3vw] z-10 block active:text-primary text-black-800 font-paragraph "
+                        to="/"
+                    >
+                        home
+                    </Link>
                     {links.map((link) => (
-                        <div className="">
-                            <a
-                                className="w-full no-underline capitalize border-b-[1pt] md:px-[3vw] px-[5vw] md:py-[2vw] py-[3vw] z-10 block active:text-primary text-black-800 font-paragraph "
-                                href={'/' + link}
-                            >
-                                {link}
-                            </a>
-                        </div>
+                        <Link
+                            className="w-full no-underline capitalize border-b-[1pt] md:px-[3vw] px-[5vw] md:py-[2vw] py-[3vw] z-10 block active:text-primary text-black-800 font-paragraph "
+                            to={'/' + link}
+                        >
+                            {link}
+                        </Link>
                     ))}
                 </div>
             </div>
