@@ -4,8 +4,8 @@ const shapeStyling =
     'w-[30%] sm:w-[50%] sm:h-[120vw] xl:h-[60vw] lg:h-[80vw] md:h-[90vw] h-[200vw]'
 const paragraphs = [
     `
-            We are an Abuja based IT agency, specializing in creating digital
-            products and services that are necessary for business.`,
+            We are an agency that specializes in creating digital
+            products and services that are necessary for businesses to thrive in this digital economy.`,
     `
 		Our mission is to provide innovative and effective web design and digital marketing solutions that help our clients achieve their business goals and enhance their online presence. We strive to create visually stunning websites that are user-friendly, responsive, and optimized for search engines; create digital marketing campaigns that actually convert to real paying customers, while maintaining the highest standards of customer service and satisfaction. 	`,
     `
