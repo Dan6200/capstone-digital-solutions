@@ -10,16 +10,19 @@ const Header: FC = () => {
     let header = useRef()
     let [vertMenuShowing, setVertMenuShowing] = useState(false)
 
-    let debouncedFunc = _.debounce(() => {
+    let throttledFunc = _.throttle(() => {
+        // to prevent the throttle function from running after being called in the last second
+        if (vertMenuShowing) return
         setShowHead(false)
-    }, 1000)
+    }, 3000)
 
     let showHeader = () => {
         let top = header.current && header.current.offsetTop
         if (top === 0) return
         setShowHead(true)
+        // to prevent the throttle function from being called
         if (vertMenuShowing) return
-        debouncedFunc()
+        throttledFunc()
     }
 
     useEffect(() => {
