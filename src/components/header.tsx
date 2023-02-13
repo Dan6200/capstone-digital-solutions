@@ -1,6 +1,13 @@
 //cspell:ignore Topbar
 import * as _ from 'lodash'
-import React, { FC, useEffect, useLayoutEffect, useRef, useState } from 'react'
+import React, {
+    FC,
+    useCallback,
+    useEffect,
+    useLayoutEffect,
+    useRef,
+    useState,
+} from 'react'
 import Navbar from './navigation'
 import Topbar from './top-bar'
 
@@ -10,31 +17,50 @@ const Header: FC = () => {
     let header = useRef()
     let [vertMenuShowing, setVertMenuShowing] = useState(false)
 
-    let throttledFunc = _.throttle(() => {
-        // to prevent the throttle function from running after being called in the last second
-        if (vertMenuShowing) return
-        setShowHead(false)
-    }, 3000)
+    let debouncedFunc = useCallback(
+        _.debounce(
+            () => {
+                // to prevent the debounce function from running after being called in the last second
+                setShowHead(false)
+                console.log(vertMenuShowing, 'runs anyways')
+            },
+            3000,
+            { leading: true }
+        ),
+        []
+    )
 
     let showHeader = () => {
         let top = header.current && header.current.offsetTop
         if (top === 0) return
         setShowHead(true)
-        // to prevent the throttle function from being called
-        if (vertMenuShowing) return
-        throttledFunc()
+        // to prevent the debounce function from being called
+        debouncedFunc()
     }
+
+    useEffect(() => {
+        window.addEventListener('touchstart', showHeader, true)
+        window.addEventListener('touchmove', showHeader, true)
+        window.addEventListener('touchend', showHeader, true)
+        window.addEventListener('touchcancel', showHeader, true)
+        return () => {
+            window.removeEventListener('touchstart', showHeader, true)
+            window.removeEventListener('touchmove', showHeader, true)
+            window.removeEventListener('touchend', showHeader, true)
+            window.removeEventListener('touchcancel', showHeader, true)
+        }
+    }, [])
 
     useEffect(() => {
         window.addEventListener('mousemove', showHeader, true)
         return () => {
             window.removeEventListener('mousemove', showHeader, true)
         }
-    }, [vertMenuShowing])
+    }, [])
 
     let showHeaderAtTop = () => {
         let top = header.current && header.current.offsetTop
-        if (top === 0) {
+        if (top === 0 || vertMenuShowing) {
             setShowAtTop(true)
         } else setShowAtTop(false)
     }
@@ -56,6 +82,9 @@ const Header: FC = () => {
         <header
             ref={header}
             className="flex invisible opacity-0 sticky header top-0 z-10 flex-col lg:py-[1vw] sm:py-[2vw] border-black-500 w-full p-[5vw]"
+            onClick={() => {
+                setShowHead(true)
+            }}
             style={{
                 ...(showAtTop
                     ? {
@@ -77,7 +106,7 @@ const Header: FC = () => {
             }}
         >
             <Topbar />
-            <Navbar setVertMenuShowing={setVertMenuShowing} />
+            <Navbar cancel={debouncedFunc.cancel} />
         </header>
     )
 }

@@ -6,14 +6,13 @@ import { SearchBar } from './search-bar'
 let menuBtnStyling =
     'text-black-800 self-end justify-self flex w-[6vw] h-[6vw] md:w-[3vw] md:h-[3vw]'
 
-export const VertMenu = ({ setVertMenuShowing }) => {
+export const VertMenu = ({ cancel }) => {
     const [showMenu, setShowMenu] = useState(false)
 
     const toggleMenu = () => {
-        console.log(showMenu)
         setShowMenu(!showMenu)
-        setVertMenuShowing(!showMenu)
-        console.log(showMenu)
+        // cancel debounced function header animation
+        cancel()
     }
 
     return (
@@ -54,6 +53,9 @@ export const VertMenu = ({ setVertMenuShowing }) => {
                 <div className="flex flex-col gap-[5vh] justify-center md:text-xl text-3xl">
                     <SearchBar />
                     <Link
+                        onClick={() => {
+                            setShowMenu(!showMenu)
+                        }}
                         className="w-full no-underline capitalize border-b-[1pt] md:px-[3vw] px-[5vw] md:py-[2vw] py-[3vw] z-10 block active:text-primary text-black-800 font-paragraph "
                         to="/"
                     >
@@ -61,6 +63,9 @@ export const VertMenu = ({ setVertMenuShowing }) => {
                     </Link>
                     {links.map((link) => (
                         <Link
+                            onClick={() => {
+                                setShowMenu(!showMenu)
+                            }}
                             className="w-full no-underline capitalize border-b-[1pt] md:px-[3vw] px-[5vw] md:py-[2vw] py-[3vw] z-10 block active:text-primary text-black-800 font-paragraph "
                             to={'/' + link}
                         >
