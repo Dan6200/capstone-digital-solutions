@@ -8,14 +8,17 @@ const Header: FC = () => {
     let [showHead, setShowHead] = useState(false)
     let [showAtTop, setShowAtTop] = useState(true)
     let header = useRef()
+    let [vertMenuShowing, setVertMenuShowing] = useState(false)
 
-    // fix this
     let debouncedFunc = _.debounce(() => {
         setShowHead(false)
     }, 1000)
 
     let showHeader = () => {
+        let top = header.current && header.current.offsetTop
+        if (top === 0) return
         setShowHead(true)
+        if (vertMenuShowing) return
         debouncedFunc()
     }
 
@@ -24,13 +27,12 @@ const Header: FC = () => {
         return () => {
             window.removeEventListener('mousemove', showHeader, true)
         }
-    }, [])
+    }, [vertMenuShowing])
 
     let showHeaderAtTop = () => {
         let top = header.current && header.current.offsetTop
         if (top === 0) {
             setShowAtTop(true)
-            setShowHead(false)
         } else setShowAtTop(false)
     }
 
@@ -72,7 +74,7 @@ const Header: FC = () => {
             }}
         >
             <Topbar />
-            <Navbar />
+            <Navbar setVertMenuShowing={setVertMenuShowing} />
         </header>
     )
 }

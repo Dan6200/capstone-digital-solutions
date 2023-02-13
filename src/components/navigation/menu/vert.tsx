@@ -1,28 +1,20 @@
 import { Link } from 'gatsby'
-import React, { useLayoutEffect, useState } from 'react'
+import React, { useState } from 'react'
 import links from './links'
 import { SearchBar } from './search-bar'
 
 let menuBtnStyling =
     'text-black-800 self-end justify-self flex w-[6vw] h-[6vw] md:w-[3vw] md:h-[3vw]'
 
-export const VertMenu = () => {
+export const VertMenu = ({ setVertMenuShowing }) => {
     const [showMenu, setShowMenu] = useState(false)
 
     const toggleMenu = () => {
+        console.log(showMenu)
         setShowMenu(!showMenu)
+        setVertMenuShowing(!showMenu)
+        console.log(showMenu)
     }
-
-    let hideMenu = () => {
-        setShowMenu(false)
-    }
-
-    useLayoutEffect(() => {
-        window.addEventListener('scroll', hideMenu, true)
-        return () => {
-            window.removeEventListener('scroll', hideMenu, true)
-        }
-    }, [])
 
     return (
         <div>
