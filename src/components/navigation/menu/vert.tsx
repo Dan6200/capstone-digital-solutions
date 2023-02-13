@@ -6,11 +6,12 @@ import { SearchBar } from './search-bar'
 let menuBtnStyling =
     'text-black-800 self-end justify-self flex w-[6vw] h-[6vw] md:w-[3vw] md:h-[3vw]'
 
-export const VertMenu = ({ cancel }) => {
+export const VertMenu = ({ setVertMenuShowing, cancel }) => {
     const [showMenu, setShowMenu] = useState(false)
 
     const toggleMenu = () => {
         setShowMenu(!showMenu)
+        setVertMenuShowing(!showMenu)
         // cancel debounced function header animation
         cancel()
     }

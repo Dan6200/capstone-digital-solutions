@@ -61,6 +61,7 @@ const Header: FC = () => {
         let top = header.current && header.current.offsetTop
         if (top === 0 || vertMenuShowing) {
             setShowAtTop(true)
+            setShowHead(false)
         } else setShowAtTop(false)
     }
 
@@ -105,7 +106,10 @@ const Header: FC = () => {
             }}
         >
             <Topbar />
-            <Navbar cancel={debouncedFunc.cancel} />
+            <Navbar
+                setVertMenuShowing={setVertMenuShowing}
+                cancel={debouncedFunc.cancel}
+            />
         </header>
     )
 }
