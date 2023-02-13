@@ -1,5 +1,5 @@
 //cspell:ignore BottomBar semibold
-import React, { FC, useRef } from 'react'
+import React, { FC, useRef, useState } from 'react'
 import emailjs from '@emailjs/browser'
 import dotenv from 'dotenv'
 dotenv.config()
@@ -14,6 +14,8 @@ const fields = [
 
 const ContactForm: FC = () => {
     const form = useRef()
+    let [showMsg, setShowMsg] = useState(false)
+    let [showErrorMsg, setShowErrorMsg] = useState(false)
 
     const sendEmail = (e: Event) => {
         e.preventDefault()
@@ -26,9 +28,17 @@ const ContactForm: FC = () => {
                 process.env.GATSBY_MY_KEY
             )
             .then(
-                (result) => {},
+                (result) => {
+                    if (result.text === 'OK') {
+                        setShowMsg(true)
+                        setTimeout(() => setShowMsg(false), 4000)
+                    }
+                },
                 (error) => {
-                    console.log(error.text)
+                    if (error) {
+                        setShowErrorMsg(true)
+                        setTimeout(() => setShowMsg(false), 4000)
+                    }
                 }
             )
     }
@@ -36,6 +46,23 @@ const ContactForm: FC = () => {
         <div className="pt-[35vw] sm:pt-[25vw] md:pt-[15vw] lg:pt-[7vw] text-mobile-4xl xl:text-sm lg:text-mobile-lg md:text-mobile-2xl sm:text-mobile-3xl flex lg:flex-row flex-col gap-[5vw] lg:gap-[3vw] justify-between w-[80%] sm:w-[70%] lg:w-[80%] mx-auto bg-color">
             <div className="my-auto text-5xl font-semibold text-center capitalize lg:text-left md:text-3xl lg:text-2xl sm:text-4xl text-black-900 font-heading">
                 <h3>One-Stop shop for your business's digital needs...</h3>
+            </div>
+            <div
+                className="fixed top-[20vh] w-[90%] ml-[-5%] shadow-md sm:w-[70%] sm:ml-0 lg:w-[50vw] lg:left-[50%] lg:ml-[-25vw] z-10 invisible mx-auto flex justify-center items-center bg-red-400 h-[10vh] xl:h-[5vh] transition-all rounded-md"
+                style={{ ...(showErrorMsg ? { visibility: 'visible' } : null) }}
+            >
+                <p className="mx-auto w-[80%] text-center my-[5%] text-white capitalize">
+                    something went wrong, please try again later
+                </p>
+            </div>
+            <div
+                className="fixed top-[20vh] w-[90%] ml-[-5%] shadow-md sm:w-[70%] sm:ml-0 lg:w-[50vw] lg:left-[50%] lg:ml-[-25vw] z-10 invisible mx-auto flex justify-center items-center bg-primary h-[10vh] xl:h-[5vh] transition-all rounded-md"
+                style={{ ...(showMsg ? { visibility: 'visible' } : null) }}
+            >
+                <p className="mx-auto w-[80%] text-center text-white font-semibold capitalize">
+                    your message was sent successfully. you will soon receive a
+                    response
+                </p>
             </div>
             <form
                 ref={form}

@@ -22,7 +22,6 @@ const Header: FC = () => {
             () => {
                 // to prevent the debounce function from running after being called in the last second
                 setShowHead(false)
-                console.log(vertMenuShowing, 'runs anyways')
             },
             3000,
             { leading: true }
