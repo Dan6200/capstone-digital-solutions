@@ -1,45 +1,21 @@
-/**
- * SEO component that queries for data with
- * Gatsby's useStaticQuery React hook
- *
- * See: https://www.gatsbyjs.com/docs/how-to/querying-data/use-static-query/
- */
+import Head from 'next/head'
+import config from '../config'
 
-import * as React from "react"
-import { useStaticQuery, graphql } from "gatsby"
+export default function SEO({ description, title }) {
+    const siteTitle = config.title
 
-function Seo({ description, title, children }) {
-  const { site } = useStaticQuery(
-    graphql`
-      query {
-        site {
-          siteMetadata {
-            title
-            description
-            author
-          }
-        }
-      }
-    `
-  )
-
-  const metaDescription = description || site.siteMetadata.description
-  const defaultTitle = site.siteMetadata?.title
-
-  return (
-    <>
-      <title>{defaultTitle ? `${title} | ${defaultTitle}` : title}</title>
-      <meta name="description" content={metaDescription} />
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={metaDescription} />
-      <meta property="og:type" content="website" />
-      <meta name="twitter:card" content="summary" />
-      <meta name="twitter:creator" content={site.siteMetadata?.author || ``} />
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={metaDescription} />
-      {children}
-    </>
-  )
+    return (
+        <Head>
+            <title>{`${title} | ${siteTitle}`}</title>
+            <meta name="description" content={description} />
+            <meta property="og:type" content="website" />
+            <meta property="og:title" content={title} />
+            <meta property="og:description" content={description} />
+            <meta property="og:site_name" content={siteTitle} />
+            <meta property="twitter:card" content="summary" />
+            <meta property="twitter:creator" content={config.social.twitter} />
+            <meta property="twitter:title" content={title} />
+            <meta property="twitter:description" content={description} />
+        </Head>
+    )
 }
-
-export default Seo

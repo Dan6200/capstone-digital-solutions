@@ -1,4 +1,4 @@
-import { Link } from 'gatsby'
+import { Link } from 'next/link'
 import React, { useState } from 'react'
 import links from './links'
 import { SearchBar } from './search-bar'
@@ -58,7 +58,7 @@ export const VertMenu = ({ setVertMenuShowing, cancel }) => {
                             setShowMenu(!showMenu)
                         }}
                         className="w-full no-underline capitalize border-b-[1pt] md:px-[3vw] px-[5vw] md:py-[2vw] py-[3vw] z-10 block active:text-primary text-black-800 font-paragraph "
-                        to="/"
+                        href="/"
                     >
                         home
                     </Link>
@@ -68,7 +68,7 @@ export const VertMenu = ({ setVertMenuShowing, cancel }) => {
                                 setShowMenu(!showMenu)
                             }}
                             className="w-full no-underline capitalize border-b-[1pt] md:px-[3vw] px-[5vw] md:py-[2vw] py-[3vw] z-10 block active:text-primary text-black-800 font-paragraph "
-                            to={'/' + link}
+                            href={'/' + link}
                         >
                             {link}
                         </Link>
