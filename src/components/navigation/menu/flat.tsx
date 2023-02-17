@@ -1,5 +1,5 @@
 //cspell:ignore Topbar
-import { Link } from 'next/link'
+import Link from 'next/link'
 import React, { FC } from 'react'
 import { Logo } from '../logo'
 import links from './links'

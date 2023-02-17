@@ -1,4 +1,3 @@
-import { navigate } from 'gatsby'
 import React from 'react'
 
 export const Back = ({ service }: { service: any }) => {
@@ -18,7 +17,7 @@ export const Back = ({ service }: { service: any }) => {
                 <div
                     className="self-end w-[50%] justify-center items-center flex text-right hover:text-tertiary text-white font-paragraph xl:text-xs no-underline capitalize text-2xl sm:text-xl md:text-lg lg:text-sm"
                     onClick={() => {
-                        navigate('/services/#' + service.h.replaceAll(' ', '-'))
+                        '/services/#' + service.h.replaceAll(' ', '-')
                     }}
                 >
                     <p className="inline">Learn more</p>

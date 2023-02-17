@@ -90,7 +90,6 @@ const Header: FC = () => {
                     ? {
                           visibility: 'visible',
                           opacity: 100,
-                          backgroundColor: 'rgb(255,252,247,0.75)',
                       }
                     : null),
                 ...(showHead

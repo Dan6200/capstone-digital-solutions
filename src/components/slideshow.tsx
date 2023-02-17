@@ -1,5 +1,6 @@
 import React, { FC } from 'react'
 import Images from '../images'
+import Image from 'next/image'
 // cspell:ignore semibold
 
 const SlideShow: FC = () => {
@@ -29,7 +30,7 @@ const SlideShow: FC = () => {
                         </div>
                     </div>
                     <div className="w-full px-16 mx-auto mb-64 bg-primary">
-                        <img
+                        <Image
                             src={image.src}
                             alt={image.alt}
                             className="relative w-full max-w-6xl mx-auto top-16"

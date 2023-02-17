@@ -22,10 +22,10 @@ const ContactForm: FC = () => {
 
         emailjs
             .sendForm(
-                process.env.GATSBY_SERVICE_ID,
-                process.env.GATSBY_TEMPLATE_ID,
+                process.env.SERVICE_ID,
+                process.env.TEMPLATE_ID,
                 form.current,
-                process.env.GATSBY_MY_KEY
+                process.env.MY_KEY
             )
             .then(
                 (result) => {

@@ -1,6 +1,10 @@
+# Nextjs
+.next
+
 # vim
 *.vim
 **/.*.sw*
+
 # Logs
 logs
 *.log

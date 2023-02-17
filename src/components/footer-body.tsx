@@ -1,5 +1,5 @@
 //cspell:ignore semibold
-import { Link } from 'next/link'
+import Link from 'next/link'
 import React, { FC } from 'react'
 
 const FooterBody: FC = () => {

@@ -1,4 +1,4 @@
-import { Link } from 'next/link'
+import Link from 'next/link'
 import React, { useState } from 'react'
 import links from './links'
 import { SearchBar } from './search-bar'
