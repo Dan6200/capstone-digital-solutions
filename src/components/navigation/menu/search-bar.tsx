@@ -10,7 +10,7 @@ export const SearchBar = () => (
             xmlns="http://www.w3.org/2000/svg"
             className="w-[6vw] md:w-[4vw] text-black-800 hover:text-primary md:m-[1vw] m-[2vw]"
             viewBox="0 0 64 64"
-            stroke-width="3"
+            strokeWidth="3"
             stroke="currentColor"
             fill="none"
         >
