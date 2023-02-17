@@ -1,13 +1,7 @@
 //cspell:ignore Topbar
 import * as _ from 'lodash'
-import React, {
-    FC,
-    useCallback,
-    useEffect,
-    useLayoutEffect,
-    useRef,
-    useState,
-} from 'react'
+import React, { FC, useCallback, useEffect, useRef, useState } from 'react'
+import { HeaderContext } from './context'
 import Navbar from './navigation'
 import Topbar from './top-bar'
 
@@ -17,7 +11,15 @@ const Header: FC = () => {
     let header = useRef()
     let [vertMenuShowing, setVertMenuShowing] = useState(false)
 
-    let debouncedFunc = useCallback(
+    let showHeader = () => {
+        let top = header.current && header.current.offsetTop
+        if (top === 0) return
+        setShowHead(true)
+        // to prevent the debounce function from being called
+        debouncedFuncMouse()
+    }
+
+    let debouncedFuncMouse: _.DebouncedFunc<any> = useCallback(
         _.debounce(
             () => {
                 // to prevent the debounce function from running after being called in the last second
@@ -29,24 +31,35 @@ const Header: FC = () => {
         []
     )
 
-    let showHeader = () => {
+    let debouncedFuncTouch: _.DebouncedFunc<any> = useCallback(
+        _.debounce(
+            () => {
+                // to prevent the debounce function from running after being called in the last second
+                setShowHead(false)
+            },
+            1500,
+            { leading: true }
+        ),
+        []
+    )
+
+    let showHeaderTouch = () => {
         let top = header.current && header.current.offsetTop
         if (top === 0) return
         setShowHead(true)
-        // to prevent the debounce function from being called
-        debouncedFunc()
+        debouncedFuncTouch()
     }
 
     useEffect(() => {
-        window.addEventListener('touchstart', showHeader, true)
-        window.addEventListener('touchmove', showHeader, true)
-        window.addEventListener('touchend', showHeader, true)
-        window.addEventListener('touchcancel', showHeader, true)
+        window.addEventListener('touchstart', showHeaderTouch, true)
+        window.addEventListener('touchmove', showHeaderTouch, true)
+        window.addEventListener('touchend', showHeaderTouch, true)
+        window.addEventListener('touchcancel', showHeaderTouch, true)
         return () => {
-            window.removeEventListener('touchstart', showHeader, true)
-            window.removeEventListener('touchmove', showHeader, true)
-            window.removeEventListener('touchend', showHeader, true)
-            window.removeEventListener('touchcancel', showHeader, true)
+            window.removeEventListener('touchstart', showHeaderTouch, true)
+            window.removeEventListener('touchmove', showHeaderTouch, true)
+            window.removeEventListener('touchend', showHeaderTouch, true)
+            window.removeEventListener('touchcancel', showHeaderTouch, true)
         }
     }, [])
 
@@ -66,12 +79,12 @@ const Header: FC = () => {
     }
 
     // for when page loads
-    useLayoutEffect(() => {
+    useEffect(() => {
         showHeaderAtTop()
     }, [])
 
     // for when scrolling
-    useLayoutEffect(() => {
+    useEffect(() => {
         window.addEventListener('scroll', showHeaderAtTop, true)
         return () => {
             window.removeEventListener('scroll', showHeaderAtTop, true)
@@ -104,11 +117,16 @@ const Header: FC = () => {
                     : null),
             }}
         >
-            <Topbar />
-            <Navbar
-                setVertMenuShowing={setVertMenuShowing}
-                cancel={debouncedFunc.cancel}
-            />
+            <HeaderContext.Provider
+                value={{
+                    mouseCancel: debouncedFuncMouse.cancel,
+                    touchCancel: debouncedFuncTouch.cancel,
+                    setVertMenuShowing,
+                }}
+            >
+                <Topbar />
+                <Navbar />
+            </HeaderContext.Provider>
         </header>
     )
 }

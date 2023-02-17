@@ -1,19 +1,23 @@
 import Link from 'next/link'
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
+import { HeaderContext, HeaderContextType } from '../../context'
 import links from './links'
 import { SearchBar } from './search-bar'
 
 let menuBtnStyling =
     'text-black-800 self-end justify-self flex w-[6vw] h-[6vw] md:w-[3vw] md:h-[3vw]'
 
-export const VertMenu = ({ setVertMenuShowing, cancel }) => {
+export const VertMenu = () => {
     const [showMenu, setShowMenu] = useState(false)
+    let { mouseCancel, touchCancel, setVertMenuShowing }: HeaderContextType =
+        useContext(HeaderContext)
 
     const toggleMenu = () => {
         setShowMenu(!showMenu)
         setVertMenuShowing(!showMenu)
         // cancel debounced function header animation
-        cancel()
+        mouseCancel()
+        touchCancel()
     }
 
     return (
@@ -59,6 +63,7 @@ export const VertMenu = ({ setVertMenuShowing, cancel }) => {
                         }}
                         className="w-full no-underline capitalize border-b-[1pt] md:px-[3vw] px-[5vw] md:py-[2vw] py-[3vw] z-10 block active:text-primary text-black-800 font-paragraph "
                         href="/"
+                        shallow
                     >
                         home
                     </Link>
@@ -69,6 +74,7 @@ export const VertMenu = ({ setVertMenuShowing, cancel }) => {
                             }}
                             className="w-full no-underline capitalize border-b-[1pt] md:px-[3vw] px-[5vw] md:py-[2vw] py-[3vw] z-10 block active:text-primary text-black-800 font-paragraph "
                             href={'/' + link}
+                            shallow
                         >
                             {link}
                         </Link>

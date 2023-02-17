@@ -1,4 +1,4 @@
-import React, { useLayoutEffect, useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { FlipCardInner } from './inner'
 
 export const FlipCard = ({
@@ -43,7 +43,7 @@ export const FlipCard = ({
         }
     }
 
-    useLayoutEffect(() => {
+    useEffect(() => {
         window.addEventListener('scroll', scrollHandler, true)
         return () => {
             window.removeEventListener('scroll', scrollHandler, true)

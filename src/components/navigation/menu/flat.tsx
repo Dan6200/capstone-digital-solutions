@@ -7,7 +7,11 @@ import links from './links'
 export const FlatMenu: FC = () => {
     return (
         <div className="flex justify-between items-end w-full xl:h-fit md:h-[5vw] h-[10vw]">
-            <Link className="lg:w-[30vw] w-[70vw] md:w-[50vw] block" href="/">
+            <Link
+                className="lg:w-[30vw] w-[70vw] md:w-[50vw] block"
+                href="/"
+                shallow
+            >
                 <Logo />
             </Link>
             <div className="hidden lg:flex gap-[5%] w-[50%] justify-end">
@@ -16,6 +20,7 @@ export const FlatMenu: FC = () => {
                         <Link
                             className="hover:text-primary mr-[5%] text-black-800 font-paragraph text-md xl:text-sm no-underline capitalize"
                             href={'/' + link}
+                            shallow
                         >
                             {link}
                         </Link>
@@ -24,6 +29,7 @@ export const FlatMenu: FC = () => {
                 <Link
                     href="#"
                     className="w-[16pt] text-black-800 font-paragraph hover:text-primary"
+                    shallow
                 >
                     {/* search icon */}
                     <svg

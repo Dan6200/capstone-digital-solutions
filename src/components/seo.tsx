@@ -1,8 +1,8 @@
 import Head from 'next/head'
-import config from '../config'
+import seoConfig from '../seo-config'
 
 export default function SEO({ description, title }) {
-    const siteTitle = config.title
+    const siteTitle = seoConfig.title
 
     return (
         <Head>
@@ -13,7 +13,10 @@ export default function SEO({ description, title }) {
             <meta property="og:description" content={description} />
             <meta property="og:site_name" content={siteTitle} />
             <meta property="twitter:card" content="summary" />
-            <meta property="twitter:creator" content={config.social.twitter} />
+            <meta
+                property="twitter:creator"
+                content={seoConfig.social.twitter}
+            />
             <meta property="twitter:title" content={title} />
             <meta property="twitter:description" content={description} />
         </Head>

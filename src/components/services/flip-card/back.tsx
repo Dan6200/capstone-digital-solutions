@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 
 export const Back = ({ service }: { service: any }) => {
@@ -14,11 +15,10 @@ export const Back = ({ service }: { service: any }) => {
                 <p className="text-3xl text-center sm:text-2xl md:text-xl lg:text-md font-paragraph">
                     {service.p}
                 </p>
-                <div
+                <Link
+                    href={'/services/#' + service.h.replaceAll(' ', '-')}
                     className="self-end w-[50%] justify-center items-center flex text-right hover:text-tertiary text-white font-paragraph xl:text-xs no-underline capitalize text-2xl sm:text-xl md:text-lg lg:text-sm"
-                    onClick={() => {
-                        '/services/#' + service.h.replaceAll(' ', '-')
-                    }}
+                    shallow
                 >
                     <p className="inline">Learn more</p>
                     <svg
@@ -32,7 +32,7 @@ export const Back = ({ service }: { service: any }) => {
                         <line x1="55.78" y1="32.63" x2="10.33" y2="32.63" />
                         <polyline points="38.55 14.63 55.78 32.79 38.55 49.32" />
                     </svg>
-                </div>
+                </Link>
             </div>
         </div>
     )

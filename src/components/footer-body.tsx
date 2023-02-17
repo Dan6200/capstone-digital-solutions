@@ -20,7 +20,7 @@ const FooterBody: FC = () => {
                     </span>
                     <span>+2349033117211</span>
                 </div>
-                <Link href="/contact">
+                <Link href="/contact" shallow>
                     <button className="shadow-xl text-white font-heading font-semibold leading-[15vw] md:leading-[8vw] lg:leading-[6vw] xl:leading-[4vw] uppercase rounded-lg xl:w-[60%] sm:w-[80%] w-[90%] active:opacity-75 hover:from-primary hover:shadow-2xl hover:to-secondary bg-gradient-to-r from-secondary to-primary h-auto text-3xl sm:text-2xl md:text-xl lg:text-lg xl:text-sm text-center">
                         click to get started
                     </button>
