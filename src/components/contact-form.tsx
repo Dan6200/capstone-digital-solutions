@@ -73,6 +73,7 @@ const ContactForm: FC = () => {
                     (f) =>
                         f.name != 'user_budget' && (
                             <input
+                                key={f.name}
                                 name={f.name}
                                 type={f.type}
                                 placeholder={f.text}

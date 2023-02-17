@@ -9,7 +9,10 @@ const SlideShow: FC = () => {
             {Images.map((image, index) => (
                 // TODO: create a selected state where each number represenst the project being done
                 <>
-                    <div className="flex items-center justify-between mx-auto gap-4 w-fit">
+                    <div
+                        key={}
+                        className="flex items-center justify-between mx-auto gap-4 w-fit"
+                    >
                         <div className="w-16 h-16 p-4 my-8 mr-2 text-center border-4 rounded-full border-secondary">
                             {index + 1}
                         </div>

@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import React, { useContext, useState } from 'react'
-import { HeaderContext, HeaderContextType } from '../../context'
+import { HeaderContext, HeaderContextType } from '../../header/context'
 import links from './links'
 import { SearchBar } from './search-bar'
 
@@ -72,6 +72,7 @@ export const VertMenu = () => {
                             onClick={() => {
                                 setShowMenu(!showMenu)
                             }}
+                            key={link}
                             className="w-full no-underline capitalize border-b-[1pt] md:px-[3vw] px-[5vw] md:py-[2vw] py-[3vw] z-10 block active:text-primary text-black-800 font-paragraph "
                             href={'/' + link}
                             shallow

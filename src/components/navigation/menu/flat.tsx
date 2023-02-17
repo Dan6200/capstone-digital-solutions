@@ -16,15 +16,14 @@ export const FlatMenu: FC = () => {
             </Link>
             <div className="hidden lg:flex gap-[5%] w-[50%] justify-end">
                 {links.map((link) => (
-                    <div className="">
-                        <Link
-                            className="hover:text-primary mr-[5%] text-black-800 font-paragraph text-md xl:text-sm no-underline capitalize"
-                            href={'/' + link}
-                            shallow
-                        >
-                            {link}
-                        </Link>
-                    </div>
+                    <Link
+                        key={link}
+                        className="hover:text-primary mr-[5%] text-black-800 font-paragraph text-md xl:text-sm no-underline capitalize"
+                        href={'/' + link}
+                        shallow
+                    >
+                        {link}
+                    </Link>
                 ))}
                 <Link
                     href="#"

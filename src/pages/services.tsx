@@ -10,6 +10,7 @@ const Services: React.FC = () => (
         <div className="jack pt-[30vw] sm:pt-[20vw] md:pt-[15vw] lg:pt-[10vw]">
             {content.map((subcontent) => (
                 <div
+                    key={subcontent.id}
                     id={subcontent.heading.replaceAll(' ', '-')}
                     className="w-[90%] mx-auto text-3xl text-left  lg:text-lg xl:text-md md:text-xl sm:text-2xl pt-[15vw] sm:pt-[10vw] md:pt-[5vw]"
                 >

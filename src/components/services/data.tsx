@@ -1,4 +1,4 @@
-export let services: object[] = [
+export let services: { h: string; p: string }[] = [
     {
         h: 'branding',
         p: 'Establish customer loyalty and trust by building a unique identity and image for your product, service, or business.',
@@ -8,7 +8,7 @@ export let services: object[] = [
         p: 'Eye catching and unique website designs that showcase what is best about your products and/or services.',
     },
     {
-        h: 'hosting and maintenance',
+        h: 'hosting & maintenance',
         p: 'Let us handle the technical solutions that come with maintaining digital products and a digital presence.',
     },
     {

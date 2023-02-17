@@ -3,19 +3,31 @@ import React, { FC } from 'react'
 const shapeStyling =
     'w-[30%] sm:w-[50%] sm:h-[120vw] xl:h-[60vw] lg:h-[80vw] md:h-[90vw] h-[200vw]'
 const paragraphs = [
-    `
+    {
+        id: '1',
+        text: `
             We are an agency that specializes in creating digital
             products and services that are necessary for businesses to thrive in this digital economy.`,
-    `
+    },
+    {
+        id: '2',
+        text: `
 		Our mission is to provide innovative and effective web design and digital marketing solutions that help our clients achieve their business goals and enhance their online presence. We strive to create visually stunning websites that are user-friendly, responsive, and optimized for search engines; create digital marketing campaigns that actually convert to real paying customers, while maintaining the highest standards of customer service and satisfaction. 	`,
-    `
+    },
+    {
+        id: '3',
+        text: `
 	We are determined to make a lasting impact in our industry by
             delivering the best possible products and service on time, every
             time.  `,
-    `
+    },
+    {
+        id: '4',
+        text: `
             We absolutely look forward to working with you and your
             business wherever it is in the world and take it to new heights.
 			`,
+    },
 ]
 
 export const MissionStatement: FC = () => (
@@ -51,8 +63,11 @@ export const MissionStatement: FC = () => (
                 what we do
             </h3>
             {paragraphs.map((paragraph) => (
-                <p className="text-center break-words text-black-800 font-paragraph">
-                    {paragraph}
+                <p
+                    key={paragraph.id}
+                    className="text-center break-words text-black-800 font-paragraph"
+                >
+                    {paragraph.text}
                 </p>
             ))}
         </div>

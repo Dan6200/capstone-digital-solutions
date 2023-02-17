@@ -16,7 +16,10 @@ export const Back = ({ service }: { service: any }) => {
                     {service.p}
                 </p>
                 <Link
-                    href={'/services/#' + service.h.replaceAll(' ', '-')}
+                    href={
+                        '/services/#' +
+                        service.h.replace('&', 'and').replaceAll(' ', '-')
+                    }
                     className="self-end w-[50%] justify-center items-center flex text-right hover:text-tertiary text-white font-paragraph xl:text-xs no-underline capitalize text-2xl sm:text-xl md:text-lg lg:text-sm"
                     shallow
                 >

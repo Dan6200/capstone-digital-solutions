@@ -1,9 +1,9 @@
 //cspell:ignore Topbar
 import * as _ from 'lodash'
 import React, { FC, useCallback, useEffect, useRef, useState } from 'react'
+import Navbar from '../navigation'
+import Topbar from '../top-bar'
 import { HeaderContext } from './context'
-import Navbar from './navigation'
-import Topbar from './top-bar'
 
 const Header: FC = () => {
     let [showHead, setShowHead] = useState(false)
