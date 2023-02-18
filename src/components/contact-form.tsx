@@ -1,5 +1,5 @@
 //cspell:ignore BottomBar semibold
-import React, { FC, useRef, useState } from 'react'
+import React, { FC, FormEvent, useRef, useState } from 'react'
 import emailjs from '@emailjs/browser'
 import dotenv from 'dotenv'
 dotenv.config()
@@ -17,7 +17,7 @@ const ContactForm: FC = () => {
     let [showMsg, setShowMsg] = useState(false)
     let [showErrorMsg, setShowErrorMsg] = useState(false)
 
-    const sendEmail = (e: Event) => {
+    const sendEmail = (e: FormEvent) => {
         e.preventDefault()
 
         emailjs

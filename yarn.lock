@@ -946,6 +946,11 @@ scheduler@^0.23.0:
   dependencies:
     loose-envify "^1.1.0"
 
+smartlook-client@^8.0.0:
+  version "8.0.0"
+  resolved "https://registry.yarnpkg.com/smartlook-client/-/smartlook-client-8.0.0.tgz#71825b41bd467effe0091df40ec1e254bfccb202"
+  integrity sha512-gx0+mYv5hUKGE/ZcuPcft2OWR8BetnTw3QWZXX2QQjhJbgliKcioDC+NrczxZmnwUalpW4RjXb4iS8lQUAZkEQ==
+
 source-map-js@^1.0.2:
   version "1.0.2"
   resolved "https://registry.npmjs.org/source-map-js/-/source-map-js-1.0.2.tgz"

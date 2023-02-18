@@ -22,6 +22,7 @@ export const Back = ({ service }: { service: any }) => {
                     }
                     className="self-end w-[50%] justify-center items-center flex text-right hover:text-tertiary text-white font-paragraph xl:text-xs no-underline capitalize text-2xl sm:text-xl md:text-lg lg:text-sm"
                     shallow
+                    scroll={false}
                 >
                     <p className="inline">Learn more</p>
                     <svg

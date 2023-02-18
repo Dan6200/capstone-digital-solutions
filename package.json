@@ -16,7 +16,8 @@
     "path-browserify": "^1.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-helmet": "^6.1.0"
+    "react-helmet": "^6.1.0",
+    "smartlook-client": "^8.0.0"
   },
   "devDependencies": {
     "@types/lodash": "^4.14.191",
@@ -34,7 +35,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "export": "next export"
   },
   "bugs": {},
   "main": "index.js"
